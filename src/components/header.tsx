@@ -7,7 +7,7 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./shadcn/button"
 import { Menu } from "lucide-react"
-import { BlackButton, GhostButton, GreenButton } from "./buttons"
+import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonWhiteTxt } from "./buttons"
 import { useBreakpoint } from "../utils/usebreakpoint"
 
 export default function Header() {
@@ -18,7 +18,7 @@ export default function Header() {
     <header
       className={"fixed top-0 left-0 right-0 z-50 bg-black"}
     >
-      <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[90vw] mx-auto flex items-center justify-between h-16 px-4">
+      <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto flex items-center justify-between h-16 px-4">
 
         {isMobile && (
           <>
@@ -71,29 +71,29 @@ export default function Header() {
               />
               <div className="flex ml-3 gap-x-1">
                 <Link href="">
-                  <GhostButton
+                  <GhostButtonGreenTxt
                   >
                     Sobre
-                  </GhostButton>
+                  </GhostButtonGreenTxt>
                 </Link>
                 <Link href="">
-                  <GhostButton
+                  <GhostButtonGreenTxt
                   >
                     Serviços
-                  </GhostButton>
+                  </GhostButtonGreenTxt>
                 </Link>
               </div>
             </div>
 
             <div className="flex gap-x-2">
-              <GreenButton
+              <GreenButtonWhiteTxt
               >
                 Abrir Conta
-              </GreenButton>
-              <BlackButton
+              </GreenButtonWhiteTxt>
+              <BlackButtonGreenTxt
               >
                 Já tenho conta
-              </BlackButton>
+              </BlackButtonGreenTxt>
             </div>
           </>
         )}
@@ -109,29 +109,29 @@ export default function Header() {
             />
             <div className="flex ml-3 gap-x-1">
               <Link href="">
-                <GhostButton
+                <GhostButtonGreenTxt
                 >
                   Sobre
-                </GhostButton>
+                </GhostButtonGreenTxt>
               </Link>
               <Link href="">
-                <GhostButton
+                <GhostButtonGreenTxt
                 >
                   Serviços
-                </GhostButton>
+                </GhostButtonGreenTxt>
               </Link>
             </div>
           </div>
 
           <div className="flex gap-x-2">
-            <GreenButton
+            <GreenButtonWhiteTxt
             >
               Abrir Conta
-            </GreenButton>
-            <BlackButton
+            </GreenButtonWhiteTxt>
+            <BlackButtonGreenTxt
             >
               Já tenho conta
-            </BlackButton>
+            </BlackButtonGreenTxt>
           </div>
           </>
         )}
