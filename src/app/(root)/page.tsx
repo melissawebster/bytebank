@@ -1,9 +1,14 @@
 "use client"
 import { BlackTitle } from "@/src/components/text-styles";
 import ilustracao from "@/public/assets/ilustracao-home.svg"
+import presente from "@/public/assets/icone-presente.png"
+import saque from "@/public/assets/icone-saque.png"
+import pontos from "@/public/assets/icone-pontos.png"
+import dispositivos from "@/public/assets/icone-dispositivos.png"
 import { useBreakpoint } from "@/src/utils/usebreakpoint";
 import Image from "next/image"
 import { BlackButtonGreenTxt, BlackButtonWhiteTxt, GhostButtonGreenTxt, TranspButtonBlackTxt } from "@/src/components/buttons";
+import CardLanding from "@/src/components/card-landing";
 
 export default function Home() {
 
@@ -34,6 +39,37 @@ export default function Home() {
         </div>
       )}
 
+      <div className="flex flex-col items-center">
+        <BlackTitle className="mt-12">
+          Vantagens do nosso banco:
+        </BlackTitle>
+        <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 my-10 max-w-3/4 md:max-w-full">
+          <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
+            <CardLanding
+              img={<Image src={presente} alt="Conta e cartão gratuitos" />}
+              title="Conta e cartão gratuitos"
+              description="Isso mesmo, nossa conta é digital, sem custo fixo e mais que isso: sem tarifa de manutenção."
+            />
+            <CardLanding
+              img={<Image src={saque} alt="Saques sem custo" />}
+              title="Saques sem custo"
+              description="Você pode sacar gratuitamente 4x por mês de qualquer Banco 24h."
+            />
+          </div>
+          <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
+            <CardLanding
+              img={<Image src={pontos} alt="Programa de pontos" />}
+              title="Programa de pontos"
+              description="Você pode acumular pontos com suas compras no crédito sem pagar mensalidade!"
+            />
+            <CardLanding
+              img={<Image src={dispositivos} alt="Seguro Dispositivos" />}
+              title="Seguro Dispositivos"
+              description="Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica."
+            />
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
