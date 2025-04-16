@@ -43,7 +43,7 @@ export default function Home() {
         <BlackTitle className="mt-12">
           Vantagens do nosso banco:
         </BlackTitle>
-        <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 my-10 max-w-3/4 md:max-w-full">
+        {/* <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 my-10 max-w-3/4 md:max-w-full">
           <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
             <CardLanding
               img={<Image src={presente} alt="Conta e cartão gratuitos" />}
@@ -68,7 +68,7 @@ export default function Home() {
               description="Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica."
             />
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
