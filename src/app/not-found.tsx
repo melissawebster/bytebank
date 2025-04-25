@@ -4,9 +4,11 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { OrangeButtonWhiteTxt } from '../components/buttons';
 import ilustracaoNotFound from "@/public/assets/ilustracao-404.svg"
+import { useRouter } from 'next/navigation'
 
 
 export default function NotFound() {
+  const router = useRouter()
   return (
     <div className="flex flex-col min-h-screen">
       <Header />
@@ -21,7 +23,7 @@ export default function NotFound() {
                 Que tal voltar e tentar novamente?
               </p>
             </div>
-            <OrangeButtonWhiteTxt>Voltar ao início</OrangeButtonWhiteTxt>
+            <OrangeButtonWhiteTxt onClick={() => router.push('/')}>Voltar ao início</OrangeButtonWhiteTxt>
             <Image 
               src={ilustracaoNotFound} 
               alt="Not Found"
