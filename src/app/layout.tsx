@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   description: "Liberdade no controle da sua vida financeira",
 };
 
-export default function RootLayout({
+export default function AppLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
