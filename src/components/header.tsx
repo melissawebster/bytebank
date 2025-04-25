@@ -2,17 +2,23 @@
 import logo from "@/public/assets/logo-bytebank.png"
 import logoSmall from "@/public/assets/logo-bytebank-small.png"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/src/components/shadcn/sheet"
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./shadcn/button"
 import { Menu } from "lucide-react"
 import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonWhiteTxt } from "./buttons"
 import { useBreakpoint } from "../utils/usebreakpoint"
+import { useState } from "react"
+import ModalSignUp from "./modal-signup"
+import ModalLogin from "./modal-login"
 
 export default function Header() {
-  const [isSheetOpen, setIsSheetOpen] = useState(false)
+
   const { isMobile, isTablet, isDesktop } = useBreakpoint()
+
+  const [isSheetOpen, setIsSheetOpen] = useState(false)
+  const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false)
+  const [isLoginOpen, setIsLoginOpen] = useState(false)
 
   return (
     <header
@@ -86,14 +92,23 @@ export default function Header() {
             </div>
 
             <div className="flex gap-x-2">
+
               <GreenButtonWhiteTxt
+                onClick={() => setIsAbrirContaOpen(true)}
               >
                 Abrir Conta
               </GreenButtonWhiteTxt>
+
+              <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
+
               <BlackButtonGreenTxt
+                onClick={() => setIsLoginOpen(true)}
               >
                 Já tenho conta
               </BlackButtonGreenTxt>
+
+              <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+
             </div>
           </>
         )}
@@ -124,28 +139,26 @@ export default function Header() {
           </div>
 
           <div className="flex gap-x-2">
+
             <GreenButtonWhiteTxt
+              onClick={() => setIsAbrirContaOpen(true)}
             >
               Abrir Conta
             </GreenButtonWhiteTxt>
+
+            <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
+
             <BlackButtonGreenTxt
+              onClick={() => setIsLoginOpen(true)}
             >
               Já tenho conta
             </BlackButtonGreenTxt>
+
+            <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+
           </div>
           </>
         )}
-
-        {/* <nav className="hidden md:flex items-center gap-6">
-          <Link href="/" className="text-sm font-medium hover:text-primary">
-            Home
-          </Link>
-          <Link href="/login">
-            <Button size="sm" className="bg-indigo-700 hover:bg-indigo-700/90 text-white">
-              Admin Area
-            </Button>
-          </Link>
-        </nav> */}
 
       </div>
     </header>

@@ -9,10 +9,17 @@ import { useBreakpoint } from "@/src/utils/usebreakpoint";
 import Image from "next/image"
 import { BlackButtonWhiteTxt, TranspButtonBlackTxt } from "@/src/components/buttons";
 import CardLanding from "@/src/components/card-landing";
+import ModalSignUp from "@/src/components/modal-signup";
+import ModalLogin from "@/src/components/modal-login";
+import { useState } from "react";
+import { Link } from "lucide-react";
 
 export default function Home() {
 
-  const { isMobile, isTablet, isDesktop } = useBreakpoint()
+  const { isMobile } = useBreakpoint()
+
+    const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false)
+    const [isLoginOpen, setIsLoginOpen] = useState(false)
 
   return (
     <div className="flex flex-col items-center">
@@ -34,8 +41,26 @@ export default function Home() {
 
       {isMobile && (
         <div className="w-full flex justify-between mt-4 gap-x-4">
-          <BlackButtonWhiteTxt className="w-[calc(50%-8px)]">Abrir conta</BlackButtonWhiteTxt>
-          <TranspButtonBlackTxt className="w-[calc(50%-8px)]">Já tenho conta</TranspButtonBlackTxt>
+
+
+          <BlackButtonWhiteTxt 
+            className="w-[calc(50%-8px)]" 
+            onClick={() => setIsAbrirContaOpen(true)}
+          >
+            Abrir conta
+          </BlackButtonWhiteTxt>
+  
+          <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
+
+          <TranspButtonBlackTxt 
+            className="w-[calc(50%-8px)]"
+            onClick={() => setIsLoginOpen(true)}
+          >
+            Já tenho conta
+          </TranspButtonBlackTxt>
+
+          <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+
         </div>
       )}
 
