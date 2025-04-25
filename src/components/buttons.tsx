@@ -46,3 +46,11 @@ export const TranspButtonBlackTxt = (props: ButtonProps) => (
     {props.children}
   </Button>
 )
+
+export const OrangeButtonWhiteTxt = (props: ButtonProps) => (
+  <Button 
+    className={twMerge("bg-[#ff5031] hover:bg-[#D74328] text-white cursor-pointer", props.className)}
+  >
+    {props.children}
+  </Button>
+)
