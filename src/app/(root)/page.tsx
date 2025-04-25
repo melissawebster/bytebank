@@ -15,7 +15,10 @@ export default function Home() {
   const { isMobile, isTablet, isDesktop } = useBreakpoint()
 
   return (
-    <div className="flex flex-col items-center h-screen">
+    // <>
+    // dskdnksandkasndksa
+    // </>
+    <div className="flex flex-col items-center">
       <div className="flex flex-col lg:flex-row md:items-center lg:gap-x-8 lg:w-[85%]">
         <BlackTitle className="w-full md:w-3/4 text-center mt-4 lg:mt-0 ">
           <p>
@@ -70,6 +73,7 @@ export default function Home() {
           </div>
         </div>
       </div>
+
     </div>
   );
 }

@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter } from "next/font/google";
 
-export const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter", 
-});
 
 export const metadata: Metadata = {
   title: "Bytebank",
@@ -18,12 +13,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="pt-BR">
-      <body
-        className={`${inter.variable} antialiased min-h-screen bg-[linear-gradient(to_bottom,#004D61_0%,#FFF_100%)]`}
+      <html
+        lang="pt-BR"
+        className="min-h-full bg-[linear-gradient(to_bottom,#004D61_0%,#FFF_100%)]"
       >
-        {children}
-      </body>
-    </html>
+        <body className="bg-transparent antialiased">
+          {children}
+        </body>
+      </html>
   );
 }

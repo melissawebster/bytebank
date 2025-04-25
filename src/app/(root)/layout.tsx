@@ -8,21 +8,12 @@ export default function RootLayout({
   }) {
 
     return (
-      <>
+      <div className="flex flex-col">
         <Header />
-            <main
-            className="bg-transparent xl:mx-20 py-4 px-6 mt-[4rem] pb-[30px] min-h-screen flex flex-col"
-            style={{
-              minHeight: `calc(100vh - 20px - ${
-              typeof window !== "undefined" && window.innerWidth < 768 ? "460px" : "180px"
-              })`,
-              display: "flex",
-              flexDirection: "column",
-            }}
-            >
-            {children}
-            </main>
+        <main className="xl:mx-20 pt-4 px-6 mt-[4rem] pb-[60px] flex flex-col flex-1">
+          {children}
+        </main>
         <Footer />
-      </>
+      </div>
     );
   }
