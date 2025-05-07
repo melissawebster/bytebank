@@ -122,6 +122,14 @@ body {
   color: var(--primary-green);
 }
 
+.bg-petroleum {
+  background-color: #004d61;
+}
+
+.bg-dashboard {
+  background-color: #e4ede3;
+}
+
 @layer base {
   * {
     @apply border-border outline-ring/50;
