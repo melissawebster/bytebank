@@ -8,14 +8,21 @@ import { useForm } from 'react-hook-form';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { Button } from "./shadcn/button";
+import { OrangeButtonWhiteTxt } from "./buttons"
 
 
 const signUpZodSchema = () =>
   z.object({
     nome: z.string().trim().min(1, 'Dado incorreto. Revise e digite novamente.'),
-    email: z.string().trim().min(1, 'Dado incorreto. Revise e digite novamente.'),
-    senha: z.string().email().trim().min(1, 'Dado incorreto. Revise e digite novamente.'),
+    email: z
+      .string()
+      .trim()
+      .min(1, 'Dado incorreto. Revise e digite novamente.')
+      .email('Dado incorreto. Revise e digite novamente.'),
+    senha: z
+      .string()
+      .trim()
+      .min(1, 'Dado incorreto. Revise e digite novamente.'),
     termos: z.literal(true, {
       errorMap: () => ({ message: "Você deve aceitar os termos." }),
     }),
@@ -59,7 +66,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="w-full max-w-xl transform rounded-xl space-y-2 min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className="w-full max-w-xl transform rounded-xl min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -80,7 +87,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
 
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="w-full flex flex-col gap-y-3 justify-center"
+                className="w-full flex flex-col gap-y-2 justify-center mt-4"
               >
                 <Input
                   label='Nome'
@@ -101,27 +108,28 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                   className="w-full md:w-2/3"
                 />
 
-                <div className="space-y-8 mt-4">
-                  <div className="flex items-center gap-4">
-                    <input
-                      type="checkbox"
-                      {...register("termos")}
-                      className="w-5 h-5 border border-green-500 rounded-sm"
-                    />
-                    <label htmlFor="termos">
-                      Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.
-                    </label>
+                <div className="space-y-8">
+                  <div>
+                    <div className="flex items-center gap-4 text-xs">
+                      <input
+                        type="checkbox"
+                        {...register("termos")}
+                        className="w-5 h-5 border border-green-500 rounded-sm"
+                      />
+                      <label htmlFor="termos">
+                        Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.
+                      </label>
+                    </div>
+                    {errors.termos && <p className="text-red-500 text-xs">{errors.termos.message}</p>}
                   </div>
 
-                  {errors.termos && <p className="text-red-500">{errors.termos.message}</p>}
-
-                  <Button
+                  <OrangeButtonWhiteTxt
                     type="submit"
                     disabled={isSubmitting}
-                    className="bg-[#ff5031] hover:bg-[#D74328] text-white cursor-pointer mx-auto block"
+                    className="mx-auto block"
                   >
                     Criar conta
-                  </Button>
+                  </OrangeButtonWhiteTxt>
                 </div>
               </form>
             </DialogPanel>

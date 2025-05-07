@@ -125,7 +125,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           <p
             id={id}
             className={twMerge(
-              "block mb-2 text-sm font-medium text-red-500",
+              "block mb-2 text-xs font-medium text-red-500",
               props.helperclassName
             )}
           >

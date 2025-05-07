@@ -5,6 +5,8 @@ interface ButtonProps {
   children: React.ReactNode;
   className?: string;
   onClick?: () => void;
+  type?: "button" | "submit" | "reset" | undefined;
+  disabled?: boolean;
 }
 
 export const GreenButtonWhiteTxt = (props: ButtonProps) => (
