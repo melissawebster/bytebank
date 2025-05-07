@@ -46,21 +46,10 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
   };
 
   return (
-      <Transition appear show={isOpen} as={Fragment}>
+    <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={close}>
-        <TransitionChild
-          as={Fragment}
-          enter="ease-out duration-300"
-          enterFrom="opacity-0"
-          enterTo="opacity-100"
-          leave="ease-in duration-200"
-          leaveFrom="opacity-100"
-          leaveTo="opacity-0"
-        >
-          <div className="fixed inset-0 bg-black/30" />
-        </TransitionChild>
-
-        <div className="fixed inset-0 flex items-center justify-center p-4">
+        <div className="fixed inset-0 bg-black/50 z-40" />
+        <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
           <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
@@ -70,7 +59,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="w-full max-w-md transform overflow-hidden rounded-xl bg-white p-6 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className="w-full max-w-xl transform rounded-xl space-y-2 min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -78,10 +67,11 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
               >
                 <X className="w-5 h-5" />
               </button>
+
               <Image
                 src={ilustracaoSignUp}
                 alt="Ilustracao Sign Up Cadastro"
-                className="mt-8"
+                className="mt-8 w-full md:w-2/3 lg:w-[220px] mx-auto"
               />
 
               <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
@@ -90,9 +80,8 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
 
               <form
                 onSubmit={handleSubmit(onSubmit)}
-                className="w-full flex flex-col justify-center"
-              > 
-
+                className="w-full flex flex-col gap-y-3 justify-center"
+              >
                 <Input
                   label='Nome'
                   helper={errors.nome?.message}
@@ -109,28 +98,36 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                   label='Senha'
                   helper={errors.senha?.message}
                   {...register("senha")}
+                  className="w-full md:w-2/3"
                 />
 
-                <label>
-                  <input type="checkbox" {...register("termos")} />
-                  Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.
-                </label>
-                {errors.termos && <p style={{ color: "red" }}>{errors.termos.message}</p>}
+                <div className="space-y-8 mt-4">
+                  <div className="flex items-center gap-4">
+                    <input
+                      type="checkbox"
+                      {...register("termos")}
+                      className="w-5 h-5 border border-green-500 rounded-sm"
+                    />
+                    <label htmlFor="termos">
+                      Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.
+                    </label>
+                  </div>
 
-                <Button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="bg-[#ff5031] hover:bg-[#D74328] text-white cursor-pointer"
-                >
-                  Criar conta
-                </Button>
+                  {errors.termos && <p className="text-red-500">{errors.termos.message}</p>}
 
+                  <Button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className="bg-[#ff5031] hover:bg-[#D74328] text-white cursor-pointer mx-auto block"
+                  >
+                    Criar conta
+                  </Button>
+                </div>
               </form>
-
             </DialogPanel>
           </TransitionChild>
         </div>
       </Dialog>
-  </Transition>
+    </Transition>
   );
 }
