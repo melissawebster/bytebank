@@ -10,7 +10,7 @@ export default function Footer() {
   return (
     <footer className="bg-black flex justify-center py-4 border-t">
 
-      <div className="flex flex-col gap-y-6 md:flex-row text-white w-fit md:w-[90%] md:justify-between lg:w-[70%] my-4">
+      <div className="container mx-auto flex flex-col gap-y-6 md:flex-row text-white md:justify-between my-4 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
 
         <div className="flex flex-col gap-y-2">
           <div className="font-bold">Serviços</div>

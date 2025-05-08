@@ -18,10 +18,8 @@ export default function DashHeader() {
   const [isLoginOpen, setIsLoginOpen] = useState(false)
 
   return (
-    <header
-      className={"fixed top-0 left-0 right-0 z-50 bg-petroleum"}
-    >
-      <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto flex items-center justify-between h-16 px-4">
+    <header className="sticky top-0 z-50 w-full bg-petroleum">
+      <div className="container mx-auto flex h-24 items-center justify-between bg-amber-700 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
 
         {/* {isMobile && (
           <>

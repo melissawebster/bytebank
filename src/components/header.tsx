@@ -24,7 +24,7 @@ export default function Header() {
     <header
       className={"fixed top-0 left-0 right-0 z-50 bg-black"}
     >
-      <div className="max-w-[100vw] md:max-w-[90vw] lg:max-w-[75vw] mx-auto flex items-center justify-between h-16 px-4">
+      <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
 
         {isMobile && (
           <>
