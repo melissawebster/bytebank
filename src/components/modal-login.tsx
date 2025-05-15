@@ -1,6 +1,5 @@
 import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react"
 import { Fragment } from "react"
-import ilustracaoLogin from "@/public/assets/ilustracao-login.svg"
 import { X } from "lucide-react"
 import Image from "next/image"
 import { BlackTitle } from "./text-styles";
@@ -73,7 +72,7 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
               </button>
 
               <Image
-                src={ilustracaoLogin}
+                src={"/assets/ilustracao-login.svg"}
                 alt="Ilustracao Log In Cadastro"
                 className="mt-8 w-full md:w-2/3 lg:w-[220px] mx-auto"
               />

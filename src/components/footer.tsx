@@ -1,8 +1,4 @@
 "use client"
-import logoWhite from "@/public/assets/logo-bytebank-white.png"
-import instagram from "@/public/assets/instagram.png"
-import whatsapp from "@/public/assets/whatsapp.png"
-import youtube from "@/public/assets/youtube.png"
 import Image from "next/image"
 
 
@@ -28,24 +24,24 @@ export default function Footer() {
 
         <div className="flex flex-col gap-y-4">
           <div className="font-bold">Desenvolvido por Alura</div>
-          <Image src={logoWhite} alt="logo bytebank" />
+          <Image src={'/assets/logo-bytebank-white.png'} alt="logo bytebank" />
           <div className="flex gap-x-3">
             <Image 
-              src={instagram} 
+              src={"/assets/instagram.png"} 
               alt="instagram"
               width={30}  
               height={30} 
               className="w-auto h-auto"
             />
             <Image 
-              src={whatsapp} 
+              src={"/assets/whatsapp.png"} 
               alt="whatsapp"
               width={31}  
               height={30} 
               className="w-auto h-auto"
             />
             <Image 
-              src={youtube} 
+              src={"/assets/youtube.png"} 
               alt="youtube"
               width={31}  
               height={22} 

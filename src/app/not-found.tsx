@@ -3,7 +3,6 @@ import Image from "next/image"
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { OrangeButtonWhiteTxt } from '../components/buttons';
-import ilustracaoNotFound from "@/public/assets/ilustracao-404.svg"
 import { useRouter } from 'next/navigation'
 
 
@@ -25,7 +24,7 @@ export default function NotFound() {
             </div>
             <OrangeButtonWhiteTxt onClick={() => router.push('/')}>Voltar ao início</OrangeButtonWhiteTxt>
             <Image 
-              src={ilustracaoNotFound} 
+              src={"/assets/ilustracao-404.svg"} 
               alt="Not Found"
               className="w-auto h-auto mt-4"
             />

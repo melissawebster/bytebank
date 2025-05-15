@@ -1,6 +1,4 @@
 "use client"
-import logo from "@/public/assets/logo-bytebank.png"
-import logoSmall from "@/public/assets/logo-bytebank-small.png"
 import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/src/components/shadcn/sheet"
 import Link from "next/link"
 import Image from "next/image"
@@ -58,7 +56,7 @@ export default function Header() {
             </Sheet>
 
             <Image
-              src={logo}
+              src={"/assets/logo-bytebank.png"}
               alt="Bytebank Logo"
               className="h-8"
               priority
@@ -70,7 +68,7 @@ export default function Header() {
           <>
             <div className="flex flex-row items-center">
               <Image
-                src={logoSmall}
+                src={"/assets/logo-bytebank-small.png"}
                 alt="Bytebank Logo"
                 className="h-8"
                 priority
@@ -117,7 +115,7 @@ export default function Header() {
           <>
           <div className="flex flex-row items-center">
             <Image
-              src={logo}
+              src={"/assets/logo-bytebank.png"}
               alt="Bytebank Logo"
               className="h-8"
               priority
