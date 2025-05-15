@@ -14,7 +14,7 @@ export default function DashHeader() {
   const menuItemStyle = 'p-3' //improve later, hover wasnt working at all
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-petroleum h-[96px] flex-col">
+    <header className="sticky top-0 z-50 w-full bg-petroleum h-[96px] flex flex-col">
 
       <div className="container max-w-screen-xl mx-auto flex h-full items-center justify-between px-4 sm:px-6">
         <div className="hidden md:block"></div> 
@@ -49,7 +49,6 @@ export default function DashHeader() {
             </nav>
           </SheetContent>
         </Sheet>
-        
         <div className="flex items-center text-sm gap-4">
           <div className="hidden md:block text-white">Joana da Silva Oliveira</div>
           <Image 
@@ -60,8 +59,6 @@ export default function DashHeader() {
             height={40}
           />
         </div>
-        
-
       </div>
     </header>
   )

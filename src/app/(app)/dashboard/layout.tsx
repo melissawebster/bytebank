@@ -8,7 +8,10 @@ export default function DashboardLayout({
     return (
       <div className="flex flex-col min-h-screen bg-pearl-green">
         <DashHeader />
-        {children}
+        <div className="m-4">
+          {children}
+        </div>
+
       </div>
     );
   }
