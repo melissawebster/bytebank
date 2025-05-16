@@ -65,7 +65,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="w-full max-w-xl transform rounded-xl min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className="relative w-full max-w-xl transform rounded-xl min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -74,12 +74,15 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <Image
-                src={"/assets/ilustracao-signup.svg"}
-                alt="Ilustracao Sign Up Cadastro"
-                className="mt-8 w-full md:w-2/3 lg:w-[220px] mx-auto"
-              />
-
+              <div className="relative w-full md:w-2/3 aspect-[354/261] mx-auto mt-8">
+                <Image
+                  src="/assets/ilustracao-signup.svg"
+                  alt="Ilustração Sign Up Cadastro"
+                  fill
+                  className="object-contain"
+                />
+              </div>
+              
               <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
                 <BlackTitle>Preencha os campos abaixo para criar sua conta corrente!</BlackTitle>
               </DialogTitle>
