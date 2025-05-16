@@ -63,3 +63,12 @@ export const OrangeButtonWhiteTxt = (props: ButtonProps) => (
     {props.children}
   </Button>
 )
+
+export const PetroleumButtonWhiteTxt = (props: ButtonProps) => (
+  <Button 
+    className={twMerge("bg-petroleum text-white cursor-pointer", props.className)}
+    onClick={props.onClick}
+  >
+    {props.children}
+  </Button>
+)

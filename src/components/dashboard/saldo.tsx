@@ -65,7 +65,7 @@ export default function Saldo() {
         unoptimized
         width={0}
         height={0}
-        className="absolute top-0 right-0 w-auto h-auto z-10 rounded-t-md rotate-180 hidden md:block lg:hidden"
+        className="absolute top-0 right-0 w-auto h-auto z-10 rounded-t-md rotate-180 hidden md:block"
       />
       <Image 
         src="/assets/pixels.png"
@@ -73,7 +73,7 @@ export default function Saldo() {
         unoptimized
         width={0}
         height={0}
-        className="absolute bottom-0 left-0 w-auto h-auto z-10 rounded-b-md hidden md:block lg:hidden"
+        className="absolute bottom-0 left-0 w-auto h-auto z-10 rounded-b-md hidden md:block"
       />
     </div>
   )
