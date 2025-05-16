@@ -5,18 +5,15 @@ import presente from "@/public/assets/icone-presente.png"
 import saque from "@/public/assets/icone-saque.png"
 import pontos from "@/public/assets/icone-pontos.png"
 import dispositivos from "@/public/assets/icone-dispositivos.png"
-import { useBreakpoint } from "@/src/utils/usebreakpoint";
 import Image from "next/image"
 import { BlackButtonWhiteTxt, TranspButtonBlackTxt } from "@/src/components/buttons";
 import CardLanding from "@/src/components/card-landing";
 import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
-import { Link } from "lucide-react";
+
 
 export default function Home() {
-
-  const { isMobile } = useBreakpoint()
 
     const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false)
     const [isLoginOpen, setIsLoginOpen] = useState(false)
@@ -39,30 +36,27 @@ export default function Home() {
         />
       </div>
 
-      {isMobile && (
-        <div className="w-full flex justify-between mt-4 gap-x-4">
+      <div className="w-full flex justify-between mt-4 gap-x-4 md:hidden">
 
+        <BlackButtonWhiteTxt 
+          className="w-[calc(50%-8px)]" 
+          onClick={() => setIsAbrirContaOpen(true)}
+        >
+          Abrir conta
+        </BlackButtonWhiteTxt>
 
-          <BlackButtonWhiteTxt 
-            className="w-[calc(50%-8px)]" 
-            onClick={() => setIsAbrirContaOpen(true)}
-          >
-            Abrir conta
-          </BlackButtonWhiteTxt>
-  
-          <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
+        <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
 
-          <TranspButtonBlackTxt 
-            className="w-[calc(50%-8px)]"
-            onClick={() => setIsLoginOpen(true)}
-          >
-            Já tenho conta
-          </TranspButtonBlackTxt>
+        <TranspButtonBlackTxt 
+          className="w-[calc(50%-8px)]"
+          onClick={() => setIsLoginOpen(true)}
+        >
+          Já tenho conta
+        </TranspButtonBlackTxt>
 
-          <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+        <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
 
-        </div>
-      )}
+      </div>
 
       <div className="flex flex-col items-center">
         <BlackTitle className="mt-12">

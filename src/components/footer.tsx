@@ -24,7 +24,12 @@ export default function Footer() {
 
         <div className="flex flex-col gap-y-4">
           <div className="font-bold">Desenvolvido por Alura</div>
-          <Image src={'/assets/logo-bytebank-white.png'} alt="logo bytebank" />
+          <Image 
+            src={'/assets/logo-bytebank-white.png'}
+            width={146}  
+            height={33} 
+            alt="logo bytebank" 
+          />
           <div className="flex gap-x-3">
             <Image 
               src={"/assets/instagram.png"} 

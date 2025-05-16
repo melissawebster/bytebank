@@ -5,14 +5,11 @@ import Image from "next/image"
 import { Button } from "./shadcn/button"
 import { Menu } from "lucide-react"
 import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonWhiteTxt } from "./buttons"
-import { useBreakpoint } from "../utils/usebreakpoint"
 import { useState } from "react"
 import ModalSignUp from "./modal-signup"
 import ModalLogin from "./modal-login"
 
 export default function Header() {
-
-  const { isMobile, isTablet, isDesktop } = useBreakpoint()
 
   const [isSheetOpen, setIsSheetOpen] = useState(false)
   const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false)
@@ -24,140 +21,94 @@ export default function Header() {
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
 
-        {isMobile && (
-          <>
-            <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
-            <SheetTrigger asChild className="md:hidden">
-              <Button variant="ghost" size="icon" className="focus:outline-none">
-                <Menu className="h-15 w-15" color="#FFF" />
-                <span className="sr-only">Toggle menu</span>
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-[80%] sm:w-[350px]">
-              <SheetTitle className="sr-only">Menu</SheetTitle>
-              <nav className="flex flex-col gap-4 mt-8 p-4">
-                <Link 
-                  href="/" 
-                  className="text-sm font-medium hover:text-primary"
-                  onClick={() => setIsSheetOpen(false)}
-                >
-                  Home
-                </Link>  
-                <Link 
-                  href="/login"
-                  onClick={() => setIsSheetOpen(false)}
-                >  
-                  <Button size="sm" className="w-1/2 bg-indigo-700 hover:bg-indigo-700/90 text-white">
-                    Admin Area
-                  </Button>
-                </Link> 
-              </nav>
-            </SheetContent>
-            </Sheet>
-
-            <Image
-              src={"/assets/logo-bytebank.png"}
-              alt="Bytebank Logo"
-              className="h-8"
-              priority
-            />
-          </>
-        )}
-
-        {isTablet && (
-          <>
-            <div className="flex flex-row items-center">
-              <Image
-                src={"/assets/logo-bytebank-small.png"}
-                alt="Bytebank Logo"
-                className="h-8"
-                priority
-              />
-              <div className="flex ml-3 gap-x-1">
-                <Link href="">
-                  <GhostButtonGreenTxt
-                  >
-                    Sobre
-                  </GhostButtonGreenTxt>
-                </Link>
-                <Link href="">
-                  <GhostButtonGreenTxt
-                  >
-                    Serviços
-                  </GhostButtonGreenTxt>
-                </Link>
-              </div>
-            </div>
-
-            <div className="flex gap-x-2">
-
-              <GreenButtonWhiteTxt
-                onClick={() => setIsAbrirContaOpen(true)}
-              >
-                Abrir Conta
-              </GreenButtonWhiteTxt>
-
-              <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
-
-              <BlackButtonGreenTxt
-                onClick={() => setIsLoginOpen(true)}
-              >
-                Já tenho conta
-              </BlackButtonGreenTxt>
-
-              <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
-
-            </div>
-          </>
-        )}
-
-        {isDesktop && (
-          <>
-          <div className="flex flex-row items-center">
-            <Image
-              src={"/assets/logo-bytebank.png"}
-              alt="Bytebank Logo"
-              className="h-8"
-              priority
-            />
-            <div className="flex ml-3 gap-x-1">
-              <Link href="">
-                <GhostButtonGreenTxt
-                >
-                  Sobre
-                </GhostButtonGreenTxt>
-              </Link>
-              <Link href="">
-                <GhostButtonGreenTxt
-                >
-                  Serviços
-                </GhostButtonGreenTxt>
-              </Link>
-            </div>
-          </div>
-
-          <div className="flex gap-x-2">
-
-            <GreenButtonWhiteTxt
-              onClick={() => setIsAbrirContaOpen(true)}
+        <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
+        <SheetTrigger asChild className="md:hidden">
+          <Button variant="ghost" size="icon" className="focus:outline-none">
+            <Menu className="h-15 w-15" color="#00c950" />
+            <span className="sr-only">Toggle menu</span>
+          </Button>
+        </SheetTrigger>
+        <SheetContent side="left" className="w-[50%] bg-black text-green-600">
+          <SheetTitle className="sr-only">Menu</SheetTitle>
+          <nav className="flex flex-col gap-4 mt-8 p-4">
+            <Link 
+              href="/" 
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsSheetOpen(false)}
             >
-              Abrir Conta
-            </GreenButtonWhiteTxt>
-
-            <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
-
-            <BlackButtonGreenTxt
-              onClick={() => setIsLoginOpen(true)}
+              Sobre
+            </Link>  
+            <Link 
+              href="/" 
+              className="text-sm font-medium hover:text-primary"
+              onClick={() => setIsSheetOpen(false)}
             >
-              Já tenho conta
-            </BlackButtonGreenTxt>
+              Serviços
+            </Link>  
 
-            <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+          </nav>
+        </SheetContent>
+        </Sheet>
 
+        <div className="flex gap-x-6">
+          <Image
+            src={"/assets/logo-bytebank.png"}
+            alt="Bytebank Logo"
+            width={146}
+            height={32}
+            className="h-8 hidden lg:block"
+            priority
+          />
+          <Image
+            src={"/assets/logo-bytebank-small.png"}
+            alt="Bytebank Logo"
+            width={27}
+            height={32}
+            className="h-8 hidden md:block lg:hidden"
+            priority
+          />
+          <div className="flex-col ml-3 gap-x-1 hidden md:block">
+            <Link href="">
+              <GhostButtonGreenTxt
+              >
+                Sobre
+              </GhostButtonGreenTxt>
+            </Link>
+            <Link href="">
+              <GhostButtonGreenTxt
+              >
+                Serviços
+              </GhostButtonGreenTxt>
+            </Link>
           </div>
-          </>
-        )}
+        </div>
 
+        <Image
+          src={"/assets/logo-bytebank.png"}
+          alt="Bytebank Logo"
+          width={146}
+          height={32}
+          className="h-8 md:hidden"
+          priority
+        />
+
+        <div className="hidden md:flex gap-x-4">
+          <GreenButtonWhiteTxt
+            onClick={() => setIsAbrirContaOpen(true)}
+          >
+            Abrir Conta
+          </GreenButtonWhiteTxt>
+
+          <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
+
+          <BlackButtonGreenTxt
+            onClick={() => setIsLoginOpen(true)}
+          >
+            Já tenho conta
+          </BlackButtonGreenTxt>
+
+          <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
+        </div>
       </div>
     </header>
   )
