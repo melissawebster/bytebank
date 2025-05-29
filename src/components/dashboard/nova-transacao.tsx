@@ -46,7 +46,7 @@ export default function NovaTransacao() {
 
         <Input
           type="number"
-          className='w-2/3 border border-green-500 bg-white rounded-md p-4 focus:outline-none focus:ring-1 focus:ring-green-500 no-spinner'
+          className='w-2/3 md:w-1/3 border border-green-500 bg-white rounded-md p-4 focus:outline-none focus:ring-1 focus:ring-green-500 no-spinner'
         />
 
         <PetroleumButtonWhiteTxt>
