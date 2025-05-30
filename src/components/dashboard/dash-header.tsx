@@ -15,8 +15,7 @@ export default function DashHeader() {
 
   return (
     <header className="sticky top-0 z-50 w-full bg-petroleum h-[96px] flex flex-col shadow-lg">
-
-      <div className="container max-w-screen-xl mx-auto flex h-full items-center justify-between px-4 sm:px-6">
+      <div className="container max-w-screen-lg mx-auto flex h-full items-center justify-between px-4 sm:px-6">
         <div className="hidden md:block"></div> 
 
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>

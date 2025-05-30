@@ -1,5 +1,6 @@
 
 import Image from "next/image";
+import { twMerge } from "tailwind-merge";
 
 
 const lista = [
@@ -29,11 +30,14 @@ const lista = [
   }
 ];
 
+interface ExtratoProps {
+  className?: string;
+}
 
-export default function Extrato() {
+export default function Extrato({className} : ExtratoProps) {
 
   return (
-    <div className="flex flex-col items-left md:items-center w-full rounded-md bg-white p-6">
+    <div className={twMerge("flex flex-col items-left md:items-center w-full rounded-md bg-white p-6", className)}>
       <div className="w-full flex flex-col items-center gap-y-6 max-w-[250px]">
 
         <div className="flex justify-between w-full">
@@ -66,8 +70,6 @@ export default function Extrato() {
             </div>
           </div>
         ))}
-
-
       </div>
     </div>
   )
