@@ -39,7 +39,6 @@ export default function Extrato({className} : ExtratoProps) {
   return (
     <div className={twMerge("flex flex-col items-left md:items-center w-full rounded-md bg-white p-6", className)}>
       <div className="w-full flex flex-col items-center gap-y-6 max-w-[250px]">
-
         <div className="flex justify-between w-full">
           <div className="text-2xl text-black font-semibold">Extrato</div>
           <div className="flex gap-x-4">
