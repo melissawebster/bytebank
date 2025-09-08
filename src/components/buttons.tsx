@@ -9,9 +9,9 @@ interface ButtonProps {
   disabled?: boolean;
 }
 
-export const GreenButtonWhiteTxt = (props: ButtonProps) => (
+export const GreenButtonBlackTxt = (props: ButtonProps) => (
   <Button 
-    className={twMerge("bg-green-500 hover:bg-green-600 text-white transition-colors cursor-pointer", props.className)}
+    className={twMerge("bg-lime-green hover:bg-green-600 dark transition-colors cursor-pointer", props.className)}
     onClick={props.onClick}
   >
     {props.children}
@@ -20,7 +20,7 @@ export const GreenButtonWhiteTxt = (props: ButtonProps) => (
 
 export const BlackButtonGreenTxt = (props: ButtonProps) => (
   <Button 
-    className={twMerge("bg-black text-green-500 transition-colors cursor-pointer border border-green-500", props.className)}
+    className={twMerge("bg-dark-transp lime-green cursor-pointer border border-white", props.className)}
     onClick={props.onClick}
   >
     {props.children}
@@ -29,7 +29,7 @@ export const BlackButtonGreenTxt = (props: ButtonProps) => (
 
 export const GhostButtonGreenTxt = (props: ButtonProps) => (
   <Button 
-    className={twMerge("text-green-500 hover:bg-transparent hover:text-green-300 transition-colors cursor-pointer", props.className)}
+    className={twMerge("lime-green hover:bg-transparent cursor-pointer", props.className)}
     onClick={props.onClick}
     variant="ghost"
   >
