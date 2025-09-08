@@ -4,7 +4,7 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Bytebank",
-  description: "Liberdade no controle da sua vida financeira",
+  description: "Financial freedom in your hands",
 };
 
 export default function AppLayout({
