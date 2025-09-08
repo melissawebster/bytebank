@@ -7,7 +7,7 @@ import { useForm } from 'react-hook-form';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { GreenButtonWhiteTxt } from "./buttons"
+import { GreenButtonBlackTxt } from "./buttons"
 
 
 const loginZodSchema = () =>
@@ -102,13 +102,13 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
 
                 <a href="/" className="text-xs text-green-600 underline">Esqueci a senha!</a>
  
-                <GreenButtonWhiteTxt
+                <GreenButtonBlackTxt
                   type="submit"
                   disabled={isSubmitting}
                   className="mx-auto block mt-4"
                 >
                   Criar conta
-                </GreenButtonWhiteTxt>
+                </GreenButtonBlackTxt>
 
               </form>
             </DialogPanel>

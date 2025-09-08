@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @custom-variant dark (&:is(.dark *));
@@ -118,21 +119,53 @@ body {
   --sidebar-ring: oklch(0.556 0 0);
 }
 
+/* Fonts */
+
+.font-electrolize {
+  font-family: 'Electrolize', sans-serif;
+}
+
 .green-text {
   color: var(--primary-green);
 }
 
-.bg-petroleum {
-  background-color: #004d61;
+/* Colors */
+
+.neon-turquoise {
+  color: #00E6FF;
+}
+
+.lime-green {
+  color: #9AFF4A;
+}
+
+.dark {
+  color: #1B1B1B
+}
+
+/* Backgrounds */
+
+.bg-dark-transp {
+  background-color: #1B1B1B;
+  opacity: 0.9;
 }
 
 .bg-pearl-green {
   background-color: #e4ede3;
 }
 
+.bg-lime-green {
+  background-color: #9AFF4A;
+}
+
 .bg-gray {
   background-color: #cbcbcb;
 }
+
+.bg-petroleum {
+  background-color: #004d61;
+}
+
 
 
 @layer utilities {

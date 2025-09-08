@@ -4,10 +4,11 @@ import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./shadcn/button"
 import { Menu } from "lucide-react"
-import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonWhiteTxt } from "./buttons"
+import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonBlackTxt } from "./buttons"
 import { useState } from "react"
 import ModalSignUp from "./modal-signup"
 import ModalLogin from "./modal-login"
+import { FullLogo } from "./shared"
 
 export default function Header() {
 
@@ -15,16 +16,17 @@ export default function Header() {
   const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false)
   const [isLoginOpen, setIsLoginOpen] = useState(false)
 
+
   return (
     <header
-      className={"fixed top-0 left-0 right-0 z-50 bg-black"}
+      className={"fixed top-0 left-0 right-0 z-50 bg-dark-transp"}
     >
       <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
 
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
         <SheetTrigger asChild className="md:hidden">
-          <Button variant="ghost" size="icon" className="focus:outline-none">
-            <Menu className="h-15 w-15" color="#00c950" />
+          <Button variant="ghost" size="icon" className="border cursor-pointer hover:bg-transparent">
+            <Menu className="h-25 w-25" color="#9AFF4A" />
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
@@ -36,14 +38,14 @@ export default function Header() {
               className="text-sm font-medium hover:text-primary"
               onClick={() => setIsSheetOpen(false)}
             >
-              Sobre
+              About Us
             </Link>  
             <Link 
               href="/" 
               className="text-sm font-medium hover:text-primary"
               onClick={() => setIsSheetOpen(false)}
             >
-              Serviços
+              Services
             </Link>  
 
           </nav>
@@ -51,60 +53,52 @@ export default function Header() {
         </Sheet>
 
         <div className="flex gap-x-6">
+          <div className="hidden lg:flex gap-x-2">
+            <FullLogo />
+          </div>
+
           <Image
             src={"/assets/logo-bytebank.png"}
             alt="Bytebank Logo"
-            width={146}
-            height={32}
-            className="h-8 hidden lg:block"
-            priority
-          />
-          <Image
-            src={"/assets/logo-bytebank-small.png"}
-            alt="Bytebank Logo"
-            width={27}
-            height={32}
-            className="h-8 hidden md:block lg:hidden"
+            width={90}
+            height={40}
+            className="hidden md:block lg:hidden"
             priority
           />
           <div className="flex-col ml-3 gap-x-1 hidden md:block">
             <Link href="">
               <GhostButtonGreenTxt
               >
-                Sobre
+                About Us
               </GhostButtonGreenTxt>
             </Link>
             <Link href="">
               <GhostButtonGreenTxt
               >
-                Serviços
+                Services
               </GhostButtonGreenTxt>
             </Link>
           </div>
         </div>
 
-        <Image
-          src={"/assets/logo-bytebank.png"}
-          alt="Bytebank Logo"
-          width={146}
-          height={32}
-          className="h-8 md:hidden"
-          priority
-        />
+        <div className="flex gap-x-2 md:hidden">
+          <FullLogo />
+        </div>
+
 
         <div className="hidden md:flex gap-x-4">
-          <GreenButtonWhiteTxt
+          <GreenButtonBlackTxt
             onClick={() => setIsAbrirContaOpen(true)}
           >
-            Abrir Conta
-          </GreenButtonWhiteTxt>
+            Open Account
+          </GreenButtonBlackTxt>
 
           <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
 
           <BlackButtonGreenTxt
             onClick={() => setIsLoginOpen(true)}
           >
-            Já tenho conta
+            Sign In
           </BlackButtonGreenTxt>
 
           <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
