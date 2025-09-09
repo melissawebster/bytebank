@@ -1,10 +1,5 @@
 "use client"
 import { BlackTitle } from "@/src/components/text-styles";
-import ilustracao from "@/public/assets/ilustracao-home.svg"
-import presente from "@/public/assets/icone-presente.png"
-import saque from "@/public/assets/icone-saque.png"
-import pontos from "@/public/assets/icone-pontos.png"
-import dispositivos from "@/public/assets/icone-dispositivos.png"
 import Image from "next/image"
 import { BlackButtonWhiteTxt, TranspButtonBlackTxt } from "@/src/components/buttons";
 import CardLanding from "@/src/components/card-landing";
@@ -44,7 +39,7 @@ export default function Home() {
           className="w-[calc(50%-8px)]" 
           onClick={() => setIsAbrirContaOpen(true)}
         >
-          Abrir conta
+          Open Account
         </BlackButtonWhiteTxt>
 
         <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
@@ -53,7 +48,7 @@ export default function Home() {
           className="w-[calc(50%-8px)]"
           onClick={() => setIsLoginOpen(true)}
         >
-          Já tenho conta
+          Sign In
         </TranspButtonBlackTxt>
 
         <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
@@ -62,31 +57,31 @@ export default function Home() {
 
       <div className="flex flex-col items-center">
         <BlackTitle className="mt-12">
-          Vantagens do nosso banco:
+          We offer
         </BlackTitle>
         <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 my-10 max-w-3/4 md:max-w-full">
           <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
             <CardLanding
-              img={<Image src={presente} alt="Conta e cartão gratuitos" />}
-              title="Conta e cartão gratuitos"
-              description="Isso mesmo, nossa conta é digital, sem custo fixo e mais que isso: sem tarifa de manutenção."
+              img={<Image src='/assets/icon-card.svg' width={80} height={80} alt="Free account & card" />}
+              title="Free account & card"
+              description="Our account is digital, with no fixed fees - and, most importantly: no monthly maintenance fee."
             />
             <CardLanding
-              img={<Image src={saque} alt="Saques sem custo" />}
-              title="Saques sem custo"
-              description="Você pode sacar gratuitamente 4x por mês de qualquer Banco 24h."
+              img={<Image src='/assets/icon-money.svg' width={80} height={80} alt="Free cash withdrawals" />}
+              title="Free cash withdrawals"
+              description="You can withdraw cash for free 4 times a month at any ATM nationwide."
             />
           </div>
           <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
             <CardLanding
-              img={<Image src={pontos} alt="Programa de pontos" />}
-              title="Programa de pontos"
-              description="Você pode acumular pontos com suas compras no crédito sem pagar mensalidade!"
+              img={<Image src='/assets/icon-points.svg' width={80} height={80} alt="Points program" />}
+              title="Points program"
+              description="Earn points with your credit card purchases without paying a membership fee!"
             />
             <CardLanding
-              img={<Image src={dispositivos} alt="Seguro Dispositivos" />}
-              title="Seguro Dispositivos"
-              description="Seus dispositivos móveis (computador e laptop) protegidos por uma mensalidade simbólica."
+              img={<Image src='/assets/icon-security.svg' width={80} height={80} alt="Device Insurance" />}
+              title="Device Insurance"
+              description="Your mobile devices (smartphone and laptop) are protected for a small symbolic fee."
             />
           </div>
         </div>
