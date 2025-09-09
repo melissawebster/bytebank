@@ -1,7 +1,7 @@
 "use client"
 import { BlackTitle } from "@/src/components/text-styles";
 import Image from "next/image"
-import { BlackButtonWhiteTxt, TranspButtonBlackTxt } from "@/src/components/buttons";
+import { BlackButtonGreenTxt, GreenButtonBlackTxt } from "@/src/components/buttons";
 import CardLanding from "@/src/components/card-landing";
 import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
@@ -35,28 +35,28 @@ export default function Home() {
 
       <div className="w-full flex justify-between mt-4 gap-x-4 md:hidden">
 
-        <BlackButtonWhiteTxt 
+        <GreenButtonBlackTxt 
           className="w-[calc(50%-8px)]" 
           onClick={() => setIsAbrirContaOpen(true)}
         >
           Open Account
-        </BlackButtonWhiteTxt>
+        </GreenButtonBlackTxt>
 
         <ModalSignUp isOpen={isAbrirContaOpen} close={() => setIsAbrirContaOpen(false)} />
 
-        <TranspButtonBlackTxt 
+        <BlackButtonGreenTxt 
           className="w-[calc(50%-8px)]"
           onClick={() => setIsLoginOpen(true)}
         >
           Sign In
-        </TranspButtonBlackTxt>
+        </BlackButtonGreenTxt>
 
         <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
 
       </div>
 
       <div className="flex flex-col items-center">
-        <BlackTitle className="mt-12">
+        <BlackTitle className="mt-12 text-white drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
           We offer
         </BlackTitle>
         <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 my-10 max-w-3/4 md:max-w-full">
