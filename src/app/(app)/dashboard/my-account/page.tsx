@@ -1,5 +1,5 @@
 "use client"
-import Conta from "@/src/components/dashboard/minha-conta";
+import Account from "@/src/components/dashboard/my-account";
 import NavDashboard from "@/src/components/dashboard/nav";
 
 
@@ -11,7 +11,7 @@ export default function MinhaConta() {
       </div>
       <div className="flex flex-col items-center gap-y-4 w-full lg:w-[85%]">
         <NavDashboard type="tablet" className="hidden md:block lg:hidden" />
-        <Conta />
+        <Account />
       </div>
     </div>
   );

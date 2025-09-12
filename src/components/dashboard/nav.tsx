@@ -8,10 +8,10 @@ interface NavDashboardProps {
 
 export default function NavDashboard({type, className} : NavDashboardProps) {
   const menuItems = [
-    {nome: 'Início', url:'/dashboard'},
-    {nome: 'Transferências', url:'/dashboard'},
-    {nome: 'Investimentos', url:'/dashboard/meus-investimentos'},
-    {nome: 'Outros serviços', url:'/dashboard/servicos'},
+    {nome: 'Home', url:'/dashboard'},
+    {nome: 'Transfers', url:'/dashboard'},
+    {nome: 'Investments', url:'/dashboard/meus-investimentos'},
+    {nome: 'Other services', url:'/dashboard/servicos'},
   ]
   return (
     <div className={twMerge('w-full', className)}>

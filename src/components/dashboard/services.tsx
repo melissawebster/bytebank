@@ -1,13 +1,13 @@
 import Image from "next/image";
 
 
-export default function Servicos() {
+export default function Services() {
   const iconStyle = 'flex flex-col items-center justify-center w-[200px] bg-white rounded-md p-2'
   return (
     <div className="relative flex flex-col items-center w-full rounded-md bg-gray-400 md:px-[10%] min-h-[400px]">
       <div className="w-full flex flex-col m-8 md:justify-between items-center">
         <div className="space-y-4 mb-6">
-          <div className="text-xl">Confira os serviços disponíveis</div>
+          <div className="text-xl">See the services we offer</div>
         </div>
         <div className="w-full flex flex-wrap items-center justify-center gap-3">
           <div className={iconStyle}>
@@ -19,7 +19,7 @@ export default function Servicos() {
               height={60}
               className=" m-8"
             />
-            <div className="font-semibold">Empréstimo</div>
+            <div className="font-semibold">Loan</div>
           </div>
           <div className={iconStyle}>
             <Image 
@@ -30,7 +30,7 @@ export default function Servicos() {
               height={60}
               className=" m-8"
             />
-            <div className="font-semibold">Meus cartões</div>
+            <div className="font-semibold">My cards</div>
           </div>
           <div className={iconStyle}>
             <Image 
@@ -41,7 +41,7 @@ export default function Servicos() {
               height={60}
               className=" m-8"
             />
-            <div className="font-semibold">Doações</div>
+            <div className="font-semibold">Donations</div>
           </div>
           <div className={iconStyle}>
             <Image 
@@ -63,7 +63,7 @@ export default function Servicos() {
               height={60}
               className=" m-8"
             />
-            <div className="font-semibold">Seguros</div>
+            <div className="font-semibold">Insurance</div>
           </div>
           <div className={iconStyle}>
             <Image 
@@ -74,7 +74,7 @@ export default function Servicos() {
               height={60}
               className=" m-8"
             />
-            <div className="font-semibold">Crédito Celular</div>
+            <div className="font-semibold">Credit</div>
           </div>
         </div>
       </div>

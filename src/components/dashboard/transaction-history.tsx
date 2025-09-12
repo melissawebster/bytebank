@@ -3,44 +3,44 @@ import Image from "next/image";
 import { twMerge } from "tailwind-merge";
 
 
-const lista = [
+const list = [
   {
-    mes: "Novembro",
-    tipo: "Depósito",
+    mes: "November",
+    tipo: "Deposit",
     data: "2024-11-05",
     valor: 150.00
   },
   {
-    mes: "Novembro",
-    tipo: "Depósito",
+    mes: "November",
+    tipo: "Deposit",
     data: "2024-11-10",
     valor: 2500.00
   },
   {
-    mes: "Novembro",
-    tipo: "Transferência",
+    mes: "November",
+    tipo: "Transfer",
     data: "2024-11-15",
     valor: 300.00
   },
   {
     mes: "Novembro",
-    tipo: "Transferência",
+    tipo: "Transfer",
     data: "2024-11-25",
     valor: 1200.00
   }
 ];
 
-interface ExtratoProps {
+interface Props {
   className?: string;
 }
 
-export default function Extrato({className} : ExtratoProps) {
+export default function TransactionHistory({className} : Props) {
 
   return (
     <div className={twMerge("flex flex-col items-left md:items-center w-full rounded-md bg-white p-6", className)}>
       <div className="w-full flex flex-col items-center gap-y-6 max-w-[250px]">
         <div className="flex justify-between w-full">
-          <div className="text-2xl text-black font-semibold">Extrato</div>
+          <div className="text-2xl text-black font-semibold">Transaction History</div>
           <div className="flex gap-x-4">
             <Image 
               src="/assets/erase.png" 
@@ -57,7 +57,7 @@ export default function Extrato({className} : ExtratoProps) {
           </div>
         </div>
 
-        {lista.map((item, index) => (
+        {list.map((item, index) => (
           <div className="flex justify-between w-full border-b border-green-400 py-2" key={index}>
             <div className="">
               <div className="green-text font-semibold">{item.mes}</div>

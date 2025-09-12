@@ -8,6 +8,7 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
 import { GreenButtonBlackTxt } from "./buttons"
+import { labelError } from "./modal-signup";
 
 
 const loginZodSchema = () =>
@@ -15,12 +16,12 @@ const loginZodSchema = () =>
     email: z
       .string()
       .trim()
-      .min(1, 'Dado incorreto. Revise e digite novamente.')
-      .email('Dado incorreto. Revise e digite novamente.'),
-    senha: z
+      .min(1, labelError)
+      .email(labelError),
+    password: z
       .string()
       .trim()
-      .min(1, 'Dado incorreto. Revise e digite novamente.'),
+      .min(1, labelError),
   });
   
 
@@ -41,7 +42,7 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
   } = useForm<SignUpFormSchema>({
     reValidateMode: "onChange",
     resolver: zodResolver(loginZodSchema()),
-    defaultValues: { email: undefined, senha: undefined },
+    defaultValues: { email: undefined, password: undefined },
   });
 
   const onSubmit = (data: any) => {
@@ -74,7 +75,7 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
               <div className="relative w-full md:w-2/3 aspect-[333/267] mx-auto mt-8">
                 <Image
                   src="/assets/ilustracao-login.svg"
-                  alt="Ilustração Sign Up Cadastro"
+                  alt="illustration"
                   fill
                   className="object-contain"
                 />
@@ -95,19 +96,19 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
                 />
 
                 <Input
-                  label='Senha'
-                  helper={errors.senha?.message}
-                  {...register("senha")}
+                  label='Password'
+                  helper={errors.password?.message}
+                  {...register("password")}
                 />
 
-                <a href="/" className="text-xs text-green-600 underline">Esqueci a senha!</a>
+                <a href="/" className="text-xs text-green-600 underline">Forgot password</a>
  
                 <GreenButtonBlackTxt
                   type="submit"
                   disabled={isSubmitting}
                   className="mx-auto block mt-4"
                 >
-                  Criar conta
+                  Go to my dashboard
                 </GreenButtonBlackTxt>
 
               </form>

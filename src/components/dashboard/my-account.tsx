@@ -2,17 +2,17 @@ import Image from "next/image";
 import Input from "../label-error-input";
 import { OrangeButtonWhiteTxt } from "../buttons";
 
-export default function Conta() {
+export default function Account() {
   return (
     <div className="relative flex flex-col items-center w-full rounded-md bg-gray-400 p-6 md:px-[10%] min-h-[400px]">
       <div className="w-full flex flex-col items-start">
 
-        <div className="text-xl font-semibold mb-6">Minha conta</div>
+        <div className="text-xl font-semibold mb-6">My account</div>
 
         <div className="w-full flex flex-col lg:flex-row">
           <Image 
             src="/assets/ilustracao-minhaconta.svg"
-            alt="minha-conta"
+            alt="my-account"
             unoptimized
             width={446}
             height={381}
@@ -23,7 +23,7 @@ export default function Conta() {
             className="w-full flex flex-col gap-y-4"
           >
             <Input
-              label='Nome'
+              label='Name'
               className="w-full md:w-2/3 lg:w-full"
             />
 
@@ -33,7 +33,7 @@ export default function Conta() {
             />
 
             <Input
-              label='Senha'
+              label='Password'
               className="w-full md:w-2/3 lg:w-full"
             />
 
@@ -41,14 +41,14 @@ export default function Conta() {
               type="submit"
               className="mt-4 w-full md:w-2/3"
             >
-              Salvar alterações
+              Save
             </OrangeButtonWhiteTxt>
 
           </form>
 
           <Image 
             src="/assets/ilustracao-minhaconta.svg"
-            alt="minha-conta"
+            alt="my-account"
             unoptimized
             width={446}
             height={381}

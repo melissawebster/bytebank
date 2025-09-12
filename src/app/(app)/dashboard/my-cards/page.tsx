@@ -1,8 +1,9 @@
 "use client"
-import Extrato from "@/src/components/dashboard/extrato";
+import TransactionHistory from "@/src/components/dashboard/transaction-history";
+import MyCards from "@/src/components/dashboard/my-cards";
 import NavDashboard from "@/src/components/dashboard/nav";
-import Saldo from "@/src/components/dashboard/saldo";
-import Servicos from "@/src/components/dashboard/servicos";
+import Balance from "@/src/components/dashboard/saldo";
+
 
 export default function Dashboard() {
   return (
@@ -12,11 +13,11 @@ export default function Dashboard() {
       </div>
       <div className="flex flex-col items-center gap-y-4 w-full lg:w-[60%]">
         <NavDashboard type="tablet" className="hidden md:block lg:hidden" />
-        <Saldo />
-        <Servicos />
+        <Balance />
+        <MyCards />
       </div>
       <div className="w-[25%] h-full hidden lg:block">
-        <Extrato className="hidden lg:block" />
+        <TransactionHistory className="hidden lg:block" />
       </div>
     </div>
   );

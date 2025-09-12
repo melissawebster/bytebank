@@ -2,13 +2,13 @@ import { Eye } from "lucide-react";
 import Image from "next/image";
 
 
-export default function Saldo() {
+export default function Balance() {
   return (
     <div className="relative flex flex-col items-center w-full rounded-md bg-petroleum md:px-[10%] min-h-[400px]">
       <div className="w-full flex flex-col md:flex-row items-center m-8 md:justify-between">
         <div className="space-y-4 mb-12">
-          <div className="text-2xl text-white">Olá, Joana! :&#41;</div>
-          <div className="text-sm text-white">Quinta-feira, 08/09/2022</div>
+          <div className="text-2xl text-white">Hi Joana! :&#41;</div>
+          <div className="text-sm text-white">Thursday, 08/09/2022</div>
           <Image 
             src="/assets/saldo-ilustracao.png"
             alt="saldo"
@@ -20,11 +20,11 @@ export default function Saldo() {
         </div>
         <div>
           <div className="flex items-center gap-x-6 border-b pb-4 border-b-white">
-            <div className="text-xl text-white">Saldo</div>
+            <div className="text-xl text-white">Balance</div>
             <Eye color="#FFF" />
           </div>
           <div className="mt-3">
-            <div className="text-lg text-white">Conta corrente</div>
+            <div className="text-lg text-white">Checking account</div>
             <div className="text-4xl text-white">R$ 2.500,00</div>
           </div>
         </div>

@@ -1,9 +1,9 @@
 "use client"
-import { Sheet, SheetContent, SheetTrigger, SheetTitle } from "@/src/components/shadcn/sheet"
+import { Sheet, SheetContent, SheetTrigger, SheetTitle, SheetClose } from "@/src/components/shadcn/sheet"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "./shadcn/button"
-import { Menu } from "lucide-react"
+import { Menu, X } from "lucide-react"
 import { BlackButtonGreenTxt, GhostButtonGreenTxt, GreenButtonBlackTxt } from "./buttons"
 import { useState } from "react"
 import ModalSignUp from "./modal-signup"
@@ -30,24 +30,21 @@ export default function Header() {
             <span className="sr-only">Toggle menu</span>
           </Button>
         </SheetTrigger>
-        <SheetContent side="left" className="w-[50%] bg-black text-green-600">
-          <SheetTitle className="sr-only">Menu</SheetTitle>
+        <SheetContent side="left" className="w-[50%] bg-dark-transp border-0 [&>button]:hidden" >
           <nav className="flex flex-col gap-4 mt-8 p-4">
-            <Link 
-              href="/" 
-              className="text-sm font-medium hover:text-primary"
-              onClick={() => setIsSheetOpen(false)}
+          <SheetClose asChild>
+            <button
+              className="absolute right-4 top-4 rounded-full p-2 hover:bg-white/10"
             >
+              <X className="h-5 w-5 text-white" />
+            </button>
+          </SheetClose>
+            <GhostButtonGreenTxt className="-ml-16">
               About Us
-            </Link>  
-            <Link 
-              href="/" 
-              className="text-sm font-medium hover:text-primary"
-              onClick={() => setIsSheetOpen(false)}
-            >
+            </GhostButtonGreenTxt>  
+            <GhostButtonGreenTxt className="-ml-18">
               Services
-            </Link>  
-
+            </GhostButtonGreenTxt>   
           </nav>
         </SheetContent>
         </Sheet>

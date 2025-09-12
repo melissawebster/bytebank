@@ -1,13 +1,13 @@
 
-import { ChevronDown, Eye } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 import Image from "next/image";
 import { Input, Listbox, ListboxButton, ListboxOption, ListboxOptions } from "@headlessui/react";
 import { useState } from "react";
 import { PetroleumButtonWhiteTxt } from "../buttons";
 
-const options = ["Câmbio de moeda", "DOC/TED", "Empréstimo e Financiamento"];
+const options = ["Currency exchange", "Loan and Financing"];
 
-export default function NovaTransacao() {
+export default function NewTransaction() {
 
   const [selected, setSelected] = useState("");
 
@@ -15,14 +15,14 @@ export default function NovaTransacao() {
     <div className="relative flex flex-col items-center w-full rounded-md bg-gray md:px-[10%] min-h-[400px]">
       <div className="w-full flex flex-col items-center md:items-start gap-y-6 m-8">
 
-        <div className="text-2xl text-white">Nova transação</div>
+        <div className="text-2xl text-white">New Transaction</div>
 
         <div className="w-[90%] max-w-sm">
           <Listbox value={selected} onChange={setSelected}>
             <div className="relative">
 
               <ListboxButton className="w-full border border-green-500 bg-white rounded-md p-4 text-left flex justify-between items-center focus:outline-none focus:ring-1 focus:ring-green-500">
-                <span>{selected || "Selecione o tipo de transação"}</span>
+                <span>{selected || "Select transaction type"}</span>
                 <ChevronDown className="w-5 h-5 text-green-500" />
               </ListboxButton>
 
@@ -42,7 +42,7 @@ export default function NovaTransacao() {
           </Listbox>
         </div>
 
-        <div className="text-xl text-white">Valor</div>
+        <div className="text-xl text-white">Value</div>
 
         <Input
           type="number"
@@ -50,7 +50,7 @@ export default function NovaTransacao() {
         />
 
         <PetroleumButtonWhiteTxt>
-          Concluir transação
+          Conclude transaction
         </PetroleumButtonWhiteTxt>
 
         <div className="relative w-4/5 md:w-2/5 aspect-[280/231] mx-auto mt-8 lg:hidden">

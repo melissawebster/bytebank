@@ -9,21 +9,22 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
 import { OrangeButtonWhiteTxt } from "./buttons"
 
+export const labelError = 'Invalid input. Please check and re-enter.'
 
 const signUpZodSchema = () =>
   z.object({
-    nome: z.string().trim().min(1, 'Dado incorreto. Revise e digite novamente.'),
+    name: z.string().trim().min(1, labelError),
     email: z
       .string()
       .trim()
-      .min(1, 'Dado incorreto. Revise e digite novamente.')
-      .email('Dado incorreto. Revise e digite novamente.'),
-    senha: z
+      .min(1, labelError)
+      .email(labelError),
+    password: z
       .string()
       .trim()
-      .min(1, 'Dado incorreto. Revise e digite novamente.'),
-    termos: z.literal(true, {
-      errorMap: () => ({ message: "Você deve aceitar os termos." }),
+      .min(1, labelError),
+    terms: z.literal(true, {
+      errorMap: () => ({ message: "You must accept the terms." }),
     }),
   });
 
@@ -44,7 +45,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
   } = useForm<SignUpFormSchema>({
     reValidateMode: "onChange",
     resolver: zodResolver(signUpZodSchema()),
-    defaultValues: { nome: undefined, email: undefined, senha: undefined },
+    defaultValues: { name: undefined, email: undefined, password: undefined },
   });
 
   const onSubmit = (data: any) => {
@@ -77,14 +78,14 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
               <div className="relative w-full md:w-2/3 aspect-[354/261] mx-auto mt-8">
                 <Image
                   src="/assets/ilustracao-signup.svg"
-                  alt="Ilustração Sign Up Cadastro"
+                  alt="illustration"
                   fill
                   className="object-contain"
                 />
               </div>
               
               <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
-                <BlackTitle>Preencha os campos abaixo para criar sua conta corrente!</BlackTitle>
+                <BlackTitle>Fill in the fields below to create your account!</BlackTitle>
               </DialogTitle>
 
               <form
@@ -92,9 +93,9 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                 className="w-full flex flex-col gap-y-2 justify-center mt-4"
               >
                 <Input
-                  label='Nome'
-                  helper={errors.nome?.message}
-                  {...register("nome")}
+                  label='Name'
+                  helper={errors.name?.message}
+                  {...register("name")}
                 />
 
                 <Input
@@ -104,9 +105,9 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                 />
 
                 <Input
-                  label='Senha'
-                  helper={errors.senha?.message}
-                  {...register("senha")}
+                  label='Password'
+                  helper={errors.password?.message}
+                  {...register("password")}
                   className="w-full md:w-2/3"
                 />
 
@@ -115,14 +116,14 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                     <div className="flex items-center gap-4 text-xs">
                       <input
                         type="checkbox"
-                        {...register("termos")}
+                        {...register("terms")}
                         className="w-5 h-5 border border-green-500 rounded-sm"
                       />
-                      <label htmlFor="termos">
-                        Li e estou ciente quanto às condições de tratamento dos meus dados conforme descrito na Política de Privacidade do banco.
-                      </label>
+                        <label htmlFor="termos">
+                        I have read and acknowledge the terms of how my data is processed as described in the bank&rsquo;s Privacy Policy.
+                        </label>
                     </div>
-                    {errors.termos && <p className="text-red-500 text-xs">{errors.termos.message}</p>}
+                    {errors.terms && <p className="text-red-500 text-xs">{errors.terms.message}</p>}
                   </div>
 
                   <OrangeButtonWhiteTxt
@@ -130,7 +131,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                     disabled={isSubmitting}
                     className="mx-auto block"
                   >
-                    Criar conta
+                    Create account
                   </OrangeButtonWhiteTxt>
                 </div>
               </form>

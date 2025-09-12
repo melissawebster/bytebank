@@ -10,7 +10,7 @@ import { Button } from "../shadcn/button"
 export default function DashHeader() {
 
   const [isSheetOpen, setIsSheetOpen] = useState(false)
-  const menuItems = ['Início', 'Transferências', 'Investimentos', 'Outros serviços']
+  const menuItems = ['Home', 'Transfers', 'Investments', 'Other services']
   const menuItemStyle = 'p-3' //improve later, hover wasnt working at all
 
   return (
@@ -49,7 +49,7 @@ export default function DashHeader() {
           </SheetContent>
         </Sheet>
         <div className="flex items-center text-sm gap-4">
-          <div className="hidden md:block text-white">Joana da Silva Oliveira</div>
+          <div className="hidden md:block text-white">Joan of Arc</div>
           <Image 
             src="/assets/avatar.png" 
             alt="avatar"
