@@ -2,7 +2,7 @@
 import TransactionHistory from "@/src/components/dashboard/transaction-history";
 import Investments from "@/src/components/dashboard/my-investments";
 import NavDashboard from "@/src/components/dashboard/nav";
-import Balance from "@/src/components/dashboard/saldo";
+import Balance from "@/src/components/dashboard/balance";
 
 
 export default function MeusInvestimentos() {

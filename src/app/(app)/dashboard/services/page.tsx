@@ -1,7 +1,7 @@
 "use client"
 import TransactionHistory from "@/src/components/dashboard/transaction-history";
 import NavDashboard from "@/src/components/dashboard/nav";
-import Balance from "@/src/components/dashboard/saldo";
+import Balance from "@/src/components/dashboard/balance";
 import Services from "@/src/components/dashboard/services";
 
 export default function Dashboard() {

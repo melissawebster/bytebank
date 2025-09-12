@@ -2,7 +2,7 @@
 import TransactionHistory from "@/src/components/dashboard/transaction-history";
 import NavDashboard from "@/src/components/dashboard/nav";
 import NewTransaction from "@/src/components/dashboard/new-transaction";
-import Balance from "@/src/components/dashboard/saldo";
+import Balance from "@/src/components/dashboard/balance";
 
 export default function Dashboard() {
   return (
