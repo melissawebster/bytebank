@@ -16,7 +16,10 @@ export default function Home() {
   return (
     <div className="container flex flex-col items-center p-4 md:px-12 lg:px-16 xl:px-20">
       {/* Hero Section */}
-      <div className="flex flex-col md:items-center lg:gap-x-4 w-full rounded-lg bg-black/30 px-4 py-6">
+      <div className="flex flex-col md:items-center lg:gap-x-4 w-full rounded-lg border px-4 py-6
+                     bg-gradient-to-r from-slate-600 to-slate-500 
+                   bg-indigo-200 
+                     bg-blend-multiply">
         <div className="flex flex-col md:flex-row w-full">
           <div className="w-full md:w-[70%] text-center md:text-left md:ml-2
              text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 
