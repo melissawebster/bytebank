@@ -18,8 +18,11 @@ export default function Home() {
       {/* Hero Section */}
       <div className="flex flex-col md:items-center lg:gap-x-4 w-full rounded-lg bg-black/30 px-4 py-6">
         <div className="flex flex-col md:flex-row w-full">
-          <div className="w-full md:w-[70%] text-center md:text-left md:ml-2 text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl lime-green opacity-80 
-                          font-electrolize leading-snug drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]">
+          <div className="w-full md:w-[70%] text-center md:text-left md:ml-2
+             text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 
+             font-electrolize leading-snug opacity-100 
+             bg-gradient-to-r from-lime-300 to-cyan-400 
+             text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(255,255,255,0.2)]">
             Experience&nbsp;greater&nbsp;freedom<br />in&nbsp;your&nbsp;financial&nbsp;life
           </div>
           <div className="flex-1 mx-auto flex w-[80%] md:w-[30%] justify-center">
@@ -63,9 +66,12 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center">
-        <WhiteTitle className="mt-12 text-white font-extralight text-lg drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
-          Our Advantages
-        </WhiteTitle>
+        <div className="mt-12 font-extralight text-3xl 
+            font-electrolize leading-snug opacity-100 
+            bg-gradient-to-r from-cyan-300 to-lime-200 
+            text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]">
+          Benefits
+        </div>
         <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-10 mb-10 mt-5 max-w-full">
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
