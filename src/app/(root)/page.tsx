@@ -14,21 +14,28 @@ export default function Home() {
     const [isLoginOpen, setIsLoginOpen] = useState(false)
 
   return (
-    <div className="container flex flex-col items-center px-4 md:px-12 lg:px-16 xl:px-20">
+    <div className="container flex flex-col items-center p-4 md:px-12 lg:px-16 xl:px-20">
       {/* Hero Section */}
-      <div className="flex flex-col md:flex-row md:items-center lg:gap-x-4 w-full border border-0.2 rounded-lg bg-black/25 p-4">
-        <div className="w-full md:w-3/4 text-center mt-4 md:mt-0 text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl lime-green opacity-80 
-                        font-electrolize leading-snug drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]">
-          Experience&nbsp;greater&nbsp;freedom<br />in&nbsp;your&nbsp;financial&nbsp;life
+      <div className="flex flex-col md:items-center lg:gap-x-4 w-full rounded-lg bg-black/30 px-4 py-6">
+        <div className="flex flex-col md:flex-row w-full">
+          <div className="w-full md:w-[70%] text-center md:text-left md:ml-2 text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl lime-green opacity-80 
+                          font-electrolize leading-snug drop-shadow-[0_0_12px_rgba(255,255,255,0.5)]">
+            Experience&nbsp;greater&nbsp;freedom<br />in&nbsp;your&nbsp;financial&nbsp;life
+          </div>
+          <div className="flex-1 mx-auto flex w-[80%] md:w-[30%] justify-center">
+            <Image
+              src="/assets/credit-cards.svg"
+              width={428}
+              height={280}
+              alt="credit"
+              className="max-w-full object-contain"
+            />
+          </div>
         </div>
-        <div className="flex-1 flex justify-center">
-          <Image
-            src="/assets/credit-cards.svg"
-            width={428}
-            height={280}
-            alt="credit"
-            className="max-w-full object-contain"
-          />
+        <div className="w-full text-white leading-relaxed font-light text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-16 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]">
+          <span>ByteBank is more than a bank — it’s your partner in financial freedom.&nbsp;</span>
+          <span className="hidden md:block h-1"></span>
+          <span className="mt-0 md:-mt-4">Simple, secure, and built for the digital world, we offer the tools and benefits that fit your lifestyle.</span>
         </div>
       </div>
       {/* */}
@@ -59,8 +66,8 @@ export default function Home() {
         <BlackTitle className="mt-12 text-white font-extralight text-lg drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
           Exclusive Advantages
         </BlackTitle>
-        <div className="flex flex-col lg:flex-row gap-y-10 lg:gap-x-10 mb-10 mt-5 max-w-3/4 md:max-w-full">
-          <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
+        <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-10 mb-10 mt-5 max-w-full">
+          <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
               img={<Image src='/assets/icon-card.svg' width={80} height={80} alt="Free account & card" />}
               title="Free account & card"
@@ -72,7 +79,7 @@ export default function Home() {
               description="You can withdraw cash for free 4 times a month at any ATM."
             />
           </div>
-          <div className="flex flex-col md:flex-row gap-y-10 md:gap-x-10">
+          <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
               img={<Image src='/assets/icon-points.svg' width={80} height={80} alt="Points program" />}
               title="Points program"
