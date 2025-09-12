@@ -50,7 +50,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             <label
               htmlFor={id}
               className={twMerge(
-                "block text-base leading-4 font-semibold text-gray-900 pl-1 pb-2",
+                "block text-base leading-4 text-white font-extralight pl-1 pb-2",
                 props.labelClassName
               )}
             >
@@ -62,7 +62,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
             <label
               id={id}
               className={twMerge(
-                "block leading-4 text-xs text-gray-900 pl-1 pb-2",
+                "block leading-4 text-xs text-white font-extralight pl-1 pb-2",
                 props.labelClassName
               )}
             >
@@ -91,8 +91,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               id={id}
               ref={ref}
               className={twMerge(
-                "block border disabled:bg-transparent bg-white border-gray-300 rounded text-gray-900" +
-                  "focus:ring-blue-600 focus:border-blue-600 w-full h-[38px] px-2.5",
+                "block border disabled:bg-transparent bg-yellow-100 border-gray-300 rounded text-gray-900 w-full h-[38px] px-2.5",
                 inputclassname,
                 errorHighlight
               )}

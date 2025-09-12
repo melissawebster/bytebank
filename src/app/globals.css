@@ -150,6 +150,10 @@ body {
   opacity: 0.95;
 }
 
+.bg-dark {
+  background-color: #1B1B1B;
+}
+
 .bg-pearl-green {
   background-color: #e4ede3;
 }

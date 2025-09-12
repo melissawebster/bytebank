@@ -2,12 +2,12 @@ import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@
 import { Fragment } from "react"
 import { X } from "lucide-react"
 import Image from "next/image"
-import { BlackTitle } from "./text-styles";
+import { WhiteTitle } from "./text-styles";
 import { useForm } from 'react-hook-form';
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { OrangeButtonWhiteTxt } from "./buttons"
+import { GreenButtonBlackTxt, OrangeButtonWhiteTxt } from "./buttons"
 
 export const labelError = 'Invalid input. Please check and re-enter.'
 
@@ -66,7 +66,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="relative w-full max-w-xl transform rounded-xl min-h-screen bg-gray-50 p-6 md:px-14 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className="relative w-full max-w-xl transform rounded-xl space-y-6 bg-dark px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -75,9 +75,9 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="relative w-full md:w-2/3 aspect-[354/261] mx-auto mt-8">
+              <div className="relative w-full md:w-[50%] aspect-[311/139] mx-auto">
                 <Image
-                  src="/assets/ilustracao-signup.svg"
+                  src="/assets/logo-bytebank.svg"
                   alt="illustration"
                   fill
                   className="object-contain"
@@ -85,7 +85,7 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
               </div>
               
               <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
-                <BlackTitle>Fill in the fields below to create your account!</BlackTitle>
+                <WhiteTitle>Fill in the fields below to create your account!</WhiteTitle>
               </DialogTitle>
 
               <form
@@ -108,12 +108,11 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                   label='Password'
                   helper={errors.password?.message}
                   {...register("password")}
-                  className="w-full md:w-2/3"
                 />
 
-                <div className="space-y-8">
+                <div className="space-y-8 mt-2">
                   <div>
-                    <div className="flex items-center gap-4 text-xs">
+                    <div className="flex items-center gap-4 text-xs text-white">
                       <input
                         type="checkbox"
                         {...register("terms")}
@@ -126,13 +125,13 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                     {errors.terms && <p className="text-red-500 text-xs">{errors.terms.message}</p>}
                   </div>
 
-                  <OrangeButtonWhiteTxt
+                  <GreenButtonBlackTxt
                     type="submit"
                     disabled={isSubmitting}
                     className="mx-auto block"
                   >
                     Create account
-                  </OrangeButtonWhiteTxt>
+                  </GreenButtonBlackTxt>
                 </div>
               </form>
             </DialogPanel>

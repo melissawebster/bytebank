@@ -1,5 +1,5 @@
 "use client"
-import { BlackTitle } from "@/src/components/text-styles";
+import { WhiteTitle } from "@/src/components/text-styles";
 import Image from "next/image"
 import { BlackButtonGreenTxt, GreenButtonBlackTxt } from "@/src/components/buttons";
 import CardLanding from "@/src/components/card-landing";
@@ -63,9 +63,9 @@ export default function Home() {
       </div>
 
       <div className="flex flex-col items-center">
-        <BlackTitle className="mt-12 text-white font-extralight text-lg drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
-          Exclusive Advantages
-        </BlackTitle>
+        <WhiteTitle className="mt-12 text-white font-extralight text-lg drop-shadow-[0_0_5px_rgba(0,0,0,0.5)]">
+          Our Advantages
+        </WhiteTitle>
         <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-10 mb-10 mt-5 max-w-full">
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
