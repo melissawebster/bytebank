@@ -1,40 +1,35 @@
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react"
-import { Fragment } from "react"
-import { X } from "lucide-react"
-import Image from "next/image"
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
+import { Fragment } from "react";
+import { X } from "lucide-react";
+import Image from "next/image";
 import { WhiteTitle } from "./text-styles";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { GreenButtonBlackTxt } from "./buttons"
+import { GreenButtonBlackTxt } from "./buttons";
 import { labelError } from "./modal-signup";
-
 
 const loginZodSchema = () =>
   z.object({
-    email: z
-      .string()
-      .trim()
-      .min(1, labelError)
-      .email(labelError),
-    password: z
-      .string()
-      .trim()
-      .min(1, labelError),
+    email: z.string().trim().min(1, labelError).email(labelError),
+    password: z.string().trim().min(1, labelError),
   });
-  
 
-  type SignUpFormSchema = z.infer<
-  ReturnType<typeof loginZodSchema>
->;
+type SignUpFormSchema = z.infer<ReturnType<typeof loginZodSchema>>;
 
 interface ModalLoginProps {
-    isOpen: boolean;
-    close: () => void;
+  isOpen: boolean;
+  close: () => void;
 }
 
-export default function ModalLogin({isOpen, close} : ModalLoginProps) {
+export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
   const {
     register,
     handleSubmit,
@@ -90,20 +85,22 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
                 className="w-full flex flex-col gap-y-3 justify-center"
               >
                 <Input
-                  label='E-mail'
+                  label="E-mail"
                   helper={errors.email?.message}
                   {...register("email")}
                   classID="text-white"
                 />
 
                 <Input
-                  label='Password'
+                  label="Password"
                   helper={errors.password?.message}
                   {...register("password")}
                 />
 
-                <a href="/" className="text-xs text-green-600 underline">Forgot password</a>
- 
+                <a href="/" className="text-xs text-green-600 underline">
+                  Forgot password
+                </a>
+
                 <GreenButtonBlackTxt
                   type="submit"
                   disabled={isSubmitting}
@@ -111,7 +108,6 @@ export default function ModalLogin({isOpen, close} : ModalLoginProps) {
                 >
                   Go to my dashboard
                 </GreenButtonBlackTxt>
-
               </form>
             </DialogPanel>
           </TransitionChild>

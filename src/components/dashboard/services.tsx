@@ -1,8 +1,8 @@
 import Image from "next/image";
 
-
 export default function Services() {
-  const iconStyle = 'flex flex-col items-center justify-center w-[200px] bg-white rounded-md p-2'
+  const iconStyle =
+    "flex flex-col items-center justify-center w-[200px] bg-white rounded-md p-2";
   return (
     <div className="relative flex flex-col items-center w-full rounded-md bg-gray-400 md:px-[10%] min-h-[400px]">
       <div className="w-full flex flex-col m-8 md:justify-between items-center">
@@ -11,7 +11,7 @@ export default function Services() {
         </div>
         <div className="w-full flex flex-wrap items-center justify-center gap-3">
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-emprestimo.png"
               alt="emprestimo"
               unoptimized
@@ -22,7 +22,7 @@ export default function Services() {
             <div className="font-semibold">Loan</div>
           </div>
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-cartoes.png"
               alt="cartoes"
               unoptimized
@@ -33,7 +33,7 @@ export default function Services() {
             <div className="font-semibold">My cards</div>
           </div>
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-doacoes.png"
               alt="doacoes"
               unoptimized
@@ -44,7 +44,7 @@ export default function Services() {
             <div className="font-semibold">Donations</div>
           </div>
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-pix.png"
               alt="doacoes"
               unoptimized
@@ -55,7 +55,7 @@ export default function Services() {
             <div className="font-semibold">Pix</div>
           </div>
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-seguros.png"
               alt="seguros"
               unoptimized
@@ -66,7 +66,7 @@ export default function Services() {
             <div className="font-semibold">Insurance</div>
           </div>
           <div className={iconStyle}>
-            <Image 
+            <Image
               src="/assets/icone-credito.png"
               alt="credito"
               unoptimized
@@ -80,7 +80,7 @@ export default function Services() {
       </div>
 
       {/* Pixels SM */}
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -88,7 +88,7 @@ export default function Services() {
         height={0}
         className="absolute top-0 left-0 w-auto h-auto z-10 rounded-t-md rotate-180 md:hidden"
       />
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -98,7 +98,7 @@ export default function Services() {
       />
 
       {/* Pixels MD */}
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -106,7 +106,7 @@ export default function Services() {
         height={0}
         className="absolute top-0 right-0 w-auto h-auto z-10 rounded-t-md rotate-180 hidden md:block"
       />
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -115,5 +115,5 @@ export default function Services() {
         className="absolute bottom-0 left-0 w-auto h-auto z-10 rounded-b-md hidden md:block"
       />
     </div>
-  )
+  );
 }

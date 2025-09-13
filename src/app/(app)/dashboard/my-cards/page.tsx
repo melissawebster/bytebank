@@ -1,9 +1,8 @@
-"use client"
+"use client";
 import TransactionHistory from "@/src/components/dashboard/transaction-history";
 import MyCards from "@/src/components/dashboard/my-cards";
 import NavDashboard from "@/src/components/dashboard/nav";
 import Balance from "@/src/components/dashboard/balance";
-
 
 export default function Dashboard() {
   return (

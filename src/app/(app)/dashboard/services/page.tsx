@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import TransactionHistory from "@/src/components/dashboard/transaction-history";
 import NavDashboard from "@/src/components/dashboard/nav";
 import Balance from "@/src/components/dashboard/balance";

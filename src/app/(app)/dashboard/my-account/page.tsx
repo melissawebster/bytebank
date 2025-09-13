@@ -1,7 +1,6 @@
-"use client"
+"use client";
 import Account from "@/src/components/dashboard/my-account";
 import NavDashboard from "@/src/components/dashboard/nav";
-
 
 export default function MinhaConta() {
   return (

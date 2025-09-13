@@ -1,43 +1,40 @@
-import { Dialog, DialogPanel, DialogTitle, Transition, TransitionChild } from "@headlessui/react"
-import { Fragment } from "react"
-import { X } from "lucide-react"
-import Image from "next/image"
+import {
+  Dialog,
+  DialogPanel,
+  DialogTitle,
+  Transition,
+  TransitionChild,
+} from "@headlessui/react";
+import { Fragment } from "react";
+import { X } from "lucide-react";
+import Image from "next/image";
 import { WhiteTitle } from "./text-styles";
-import { useForm } from 'react-hook-form';
+import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { GreenButtonBlackTxt, OrangeButtonWhiteTxt } from "./buttons"
+import { GreenButtonBlackTxt, OrangeButtonWhiteTxt } from "./buttons";
 
-export const labelError = 'Invalid input. Please check and re-enter.'
+export const labelError = "Invalid input. Please check and re-enter.";
 
 const signUpZodSchema = () =>
   z.object({
     name: z.string().trim().min(1, labelError),
-    email: z
-      .string()
-      .trim()
-      .min(1, labelError)
-      .email(labelError),
-    password: z
-      .string()
-      .trim()
-      .min(1, labelError),
+    email: z.string().trim().min(1, labelError).email(labelError),
+    password: z.string().trim().min(1, labelError),
     terms: z.literal(true, {
       errorMap: () => ({ message: "You must accept the terms." }),
     }),
   });
 
-  type SignUpFormSchema = z.infer<
-  ReturnType<typeof signUpZodSchema>
->;
+type SignUpFormSchema = z.infer<ReturnType<typeof signUpZodSchema>>;
 
 interface ModalSignUpProps {
-    isOpen: boolean;
-    close: () => void;
+  isOpen: boolean;
+  close: () => void;
 }
 
-export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
+export default function ModalSignUp({ isOpen, close }: ModalSignUpProps) {
   const {
     register,
     handleSubmit,
@@ -83,9 +80,11 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                   className="object-contain"
                 />
               </div>
-              
+
               <DialogTitle className="text-lg font-medium leading-6 text-gray-900">
-                <WhiteTitle>Fill in the fields below to create your account!</WhiteTitle>
+                <WhiteTitle>
+                  Fill in the fields below to create your account!
+                </WhiteTitle>
               </DialogTitle>
 
               <form
@@ -93,19 +92,19 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                 className="w-full flex flex-col gap-y-2 justify-center mt-4"
               >
                 <Input
-                  label='Name'
+                  label="Name"
                   helper={errors.name?.message}
                   {...register("name")}
                 />
 
                 <Input
-                  label='E-mail'
+                  label="E-mail"
                   helper={errors.email?.message}
                   {...register("email")}
                 />
 
                 <Input
-                  label='Password'
+                  label="Password"
                   helper={errors.password?.message}
                   {...register("password")}
                 />
@@ -118,11 +117,17 @@ export default function ModalSignUp({isOpen, close} : ModalSignUpProps) {
                         {...register("terms")}
                         className="w-5 h-5 border border-green-500 rounded-sm"
                       />
-                        <label htmlFor="termos">
-                        I have read and acknowledge the terms of how my data is processed as described in the bank&rsquo;s Privacy Policy.
-                        </label>
+                      <label htmlFor="termos">
+                        I have read and acknowledge the terms of how my data is
+                        processed as described in the bank&rsquo;s Privacy
+                        Policy.
+                      </label>
                     </div>
-                    {errors.terms && <p className="text-red-500 text-xs">{errors.terms.message}</p>}
+                    {errors.terms && (
+                      <p className="text-red-500 text-xs">
+                        {errors.terms.message}
+                      </p>
+                    )}
                   </div>
 
                   <GreenButtonBlackTxt

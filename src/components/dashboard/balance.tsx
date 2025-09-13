@@ -1,7 +1,6 @@
 import { Eye } from "lucide-react";
 import Image from "next/image";
 
-
 export default function Balance() {
   return (
     <div className="relative flex flex-col items-center w-full rounded-md bg-petroleum md:px-[10%] min-h-[400px]">
@@ -9,7 +8,7 @@ export default function Balance() {
         <div className="space-y-4 mb-12">
           <div className="text-2xl text-white">Hi Joana! :&#41;</div>
           <div className="text-sm text-white">Thursday, 08/09/2022</div>
-          <Image 
+          <Image
             src="/assets/saldo-ilustracao.png"
             alt="saldo"
             unoptimized
@@ -28,10 +27,9 @@ export default function Balance() {
             <div className="text-4xl text-white">R$ 2.500,00</div>
           </div>
         </div>
-
       </div>
 
-      <Image 
+      <Image
         src="/assets/saldo-ilustracao.png"
         alt="saldo"
         unoptimized
@@ -41,7 +39,7 @@ export default function Balance() {
       />
 
       {/* Pixels SM */}
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -49,7 +47,7 @@ export default function Balance() {
         height={0}
         className="absolute top-0 left-0 w-auto h-auto z-10 rounded-t-md rotate-180 md:hidden"
       />
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -59,7 +57,7 @@ export default function Balance() {
       />
 
       {/* Pixels MD */}
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -67,7 +65,7 @@ export default function Balance() {
         height={0}
         className="absolute top-0 right-0 w-auto h-auto z-10 rounded-t-md rotate-180 hidden md:block"
       />
-      <Image 
+      <Image
         src="/assets/pixels.png"
         alt="pixels"
         unoptimized
@@ -76,5 +74,5 @@ export default function Balance() {
         className="absolute bottom-0 left-0 w-auto h-auto z-10 rounded-b-md hidden md:block"
       />
     </div>
-  )
+  );
 }
