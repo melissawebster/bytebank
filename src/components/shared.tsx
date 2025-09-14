@@ -17,3 +17,12 @@ export const FullLogo = () => {
     </>
   );
 };
+
+export const cardStyle =
+  "rounded-lg border bg-gradient-to-r from-slate-600 to-slate-500 bg-indigo-200 bg-blend-multiply";
+
+export const whiteTextStyle =
+  "text-white leading-relaxed font-light drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]";
+
+export const shinyTitleStyle =
+  "font-electrolize bg-gradient-to-r from-cyan-300 to-lime-200 text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
