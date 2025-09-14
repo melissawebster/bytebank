@@ -55,12 +55,12 @@ export default function Header() {
                 </button>
               </SheetClose>
               <SheetTitle className="hidden">Menu</SheetTitle>
-              <GhostButtonGreenTxt className="-ml-16">
+              <div className="lime-green cursor-pointer text-sm ml-3">
                 About Us
-              </GhostButtonGreenTxt>
-              <GhostButtonGreenTxt className="-ml-18">
+              </div>
+              <div className="lime-green cursor-pointer text-sm ml-3">
                 Services
-              </GhostButtonGreenTxt>
+              </div>
             </nav>
           </SheetContent>
         </Sheet>

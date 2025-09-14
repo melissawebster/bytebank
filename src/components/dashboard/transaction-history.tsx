@@ -45,15 +45,6 @@ export default function TransactionHistory({ className }: Props) {
           <div className="text-2xl text-black font-semibold">
             Transaction History
           </div>
-          <div className="flex gap-x-4">
-            <Image src="/assets/erase.png" alt="erase" width={40} height={40} />
-            <Image
-              src="/assets/delete.png"
-              alt="delete"
-              width={40}
-              height={40}
-            />
-          </div>
         </div>
 
         {list.map((item, index) => (

@@ -1,7 +1,7 @@
 "use client";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { BlackButtonGreenTxt, OrangeButtonWhiteTxt } from "../components/buttons";
+import { BlackButtonGreenTxt } from "../components/buttons";
 import { useRouter } from "next/navigation";
 import { cardStyle, shinyTitleStyle, whiteTextStyle } from "../components/shared";
 

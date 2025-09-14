@@ -11,7 +11,6 @@ export default function NavDashboard({ type, className }: NavDashboardProps) {
     { nome: "Home", url: "/dashboard" },
     { nome: "Transfers", url: "/dashboard" },
     { nome: "Investments", url: "/dashboard/meus-investimentos" },
-    { nome: "Other services", url: "/dashboard/servicos" },
   ];
   return (
     <div className={twMerge("w-full", className)}>

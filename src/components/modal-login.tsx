@@ -15,6 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
 import { GreenButtonBlackTxt } from "./buttons";
 import { labelError } from "./modal-signup";
+import { useRouter } from "next/navigation";
 
 const loginZodSchema = () =>
   z.object({
@@ -39,6 +40,8 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
     resolver: zodResolver(loginZodSchema()),
     defaultValues: { email: undefined, password: undefined },
   });
+
+  const router = useRouter();
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -100,15 +103,15 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
                 <a href="/" className="text-xs text-green-600 underline">
                   Forgot password
                 </a>
-
-                <GreenButtonBlackTxt
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="mx-auto block mt-4"
-                >
-                  Go to my dashboard
-                </GreenButtonBlackTxt>
               </form>
+              <GreenButtonBlackTxt
+                // type="submit"
+                // disabled={isSubmitting}
+                className="mx-auto block mt-4"
+                onClick={() => router.push("/dashboard")}
+              >
+                Go to my dashboard
+              </GreenButtonBlackTxt>
             </DialogPanel>
           </TransitionChild>
         </div>

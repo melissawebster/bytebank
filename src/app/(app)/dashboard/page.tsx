@@ -6,7 +6,7 @@ import Balance from "@/src/components/dashboard/balance";
 
 export default function Dashboard() {
   return (
-    <div className="flex my-4 gap-x-4 max-w-screen-lg mx-auto min-h-screen">
+    <div className="container flex mb-4 gap-x-4 mx-auto min-h-screen p-4 md:px-12 lg:px-16 xl:px-20">
       <div className="w-[15%] h-full hidden lg:block">
         <NavDashboard type="desktop" className="hidden lg:block" />
       </div>

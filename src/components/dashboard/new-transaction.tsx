@@ -9,6 +9,7 @@ import {
 } from "@headlessui/react";
 import { useState } from "react";
 import { PetroleumButtonWhiteTxt } from "../buttons";
+import { cardStyle } from "../shared";
 
 const options = ["Currency exchange", "Loan and Financing"];
 
@@ -16,7 +17,7 @@ export default function NewTransaction() {
   const [selected, setSelected] = useState("");
 
   return (
-    <div className="relative flex flex-col items-center w-full rounded-md bg-gray md:px-[10%] min-h-[400px]">
+    <div className={`${cardStyle} relative flex flex-col items-center w-full md:px-[10%] min-h-[400px]`}>
       <div className="w-full flex flex-col items-center md:items-start gap-y-6 m-8">
         <div className="text-2xl text-white">New Transaction</div>
 
@@ -62,41 +63,6 @@ export default function NewTransaction() {
         </div>
       </div>
 
-      {/* Pixels SM */}
-      <Image
-        src="/assets/pixels.png"
-        alt="pixels"
-        unoptimized
-        width={0}
-        height={0}
-        className="absolute top-0 left-0 w-auto h-auto z-10 rounded-t-md rotate-180 md:hidden"
-      />
-      <Image
-        src="/assets/pixels.png"
-        alt="pixels"
-        unoptimized
-        width={0}
-        height={0}
-        className="absolute bottom-0 right-0 w-auto h-auto z-10 rounded-b-md md:hidden"
-      />
-
-      {/* Pixels MD */}
-      <Image
-        src="/assets/pixels.png"
-        alt="pixels"
-        unoptimized
-        width={0}
-        height={0}
-        className="absolute top-0 right-0 w-auto h-auto z-10 rounded-t-md rotate-180 hidden md:block"
-      />
-      <Image
-        src="/assets/pixels.png"
-        alt="pixels"
-        unoptimized
-        width={0}
-        height={0}
-        className="absolute bottom-0 left-0 w-auto h-auto z-10 rounded-b-md hidden md:block"
-      />
     </div>
   );
 }
