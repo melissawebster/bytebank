@@ -1,9 +1,9 @@
 "use client";
-import Image from "next/image";
 import Header from "../components/header";
 import Footer from "../components/footer";
-import { OrangeButtonWhiteTxt } from "../components/buttons";
+import { BlackButtonGreenTxt, OrangeButtonWhiteTxt } from "../components/buttons";
 import { useRouter } from "next/navigation";
+import { cardStyle, shinyTitleStyle, whiteTextStyle } from "../components/shared";
 
 export default function NotFound() {
   const router = useRouter();
@@ -11,22 +11,17 @@ export default function NotFound() {
     <div className="flex flex-col min-h-screen">
       <Header />
       <div className="xl:mx-20 pt-4 px-6 mt-[4rem] pb-[60px] flex flex-col flex-1">
-        <div className="flex flex-col items-center gap-y-4 mt-[30px]">
-          <div className="text-black font-bold text-lg">
-            Ops! Não encontramos a página...{" "}
+        <div className={`${cardStyle} mx-auto flex flex-col items-center w-full md:w-1/2 text-sm px-4 py-6 gap-y-4 mt-[30px]`}>
+          <div className={`${shinyTitleStyle} text-black font-bold text-lg lg:text-3xl`}>
+            Oops! This page doesn’t exist.
           </div>
-          <div className="flex flex-col items-center text-md text-center">
-            <p>E olha que exploramos o universo procurando por ela!</p>
-            <p>Que tal voltar e tentar novamente?</p>
+          <div className={`${whiteTextStyle} flex flex-col items-center gap-y-2 text-md lg:text-lg text-center`}>
+            <p>Even after exploring the whole ByteBank&nbsp;universe.</p>
+            <p>Let&#39;s head back and try again?</p>
           </div>
-          <OrangeButtonWhiteTxt onClick={() => router.push("/")}>
-            Voltar ao início
-          </OrangeButtonWhiteTxt>
-          <Image
-            src={"/assets/ilustracao-404.svg"}
-            alt="Not Found"
-            className="w-auto h-auto mt-4"
-          />
+          <BlackButtonGreenTxt onClick={() => router.push("/")}>
+            Go back home
+          </BlackButtonGreenTxt>
         </div>
       </div>
       <Footer />
