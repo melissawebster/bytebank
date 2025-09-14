@@ -1,5 +1,4 @@
 "use client";
-import { WhiteTitle } from "@/src/components/text-styles";
 import Image from "next/image";
 import {
   BlackButtonGreenTxt,
@@ -9,6 +8,7 @@ import CardLanding from "@/src/components/card-landing";
 import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
+import { cardStyle, shinyTitleStyle, whiteTextStyle } from "@/src/components/shared";
 
 export default function Home() {
   const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false);
@@ -18,10 +18,7 @@ export default function Home() {
     <div className="container flex flex-col items-center p-4 md:px-12 lg:px-16 xl:px-20">
       {/* Hero Section */}
       <div
-        className="flex flex-col md:items-center lg:gap-x-4 w-full rounded-lg border px-4 py-6
-                     bg-gradient-to-r from-slate-600 to-slate-500 
-                   bg-indigo-200 
-                     bg-blend-multiply"
+        className={`${cardStyle} flex flex-col md:items-center lg:gap-x-4 w-full px-4 py-6`}
       >
         <div className="flex flex-col md:flex-row w-full">
           <div
@@ -45,9 +42,8 @@ export default function Home() {
             />
           </div>
         </div>
-        <div 
-          className="w-full text-white leading-relaxed font-light text-sm lg:text-lg 
-           mt-0 md:-mt-8 lg:-mt-16 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]"
+        <div
+          className={`${whiteTextStyle} w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-16 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]`}
         >
           <span>
             ByteBank is more than a bank — it’s your partner in financial
@@ -87,10 +83,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center">
         <div
-          className="mt-12 font-extralight text-3xl 
-            font-electrolize leading-snug opacity-100 
-            bg-gradient-to-r from-cyan-300 to-lime-200 
-            text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
+          className={`${shinyTitleStyle} mt-12 font-extralight text-3xl opacity-100`}
         >
           Benefits
         </div>
@@ -106,7 +99,7 @@ export default function Home() {
                 />
               }
               title="Free account & card"
-              description="A free digital account. No monthly fees, ever."
+              description={<span>A free digital account.<br /> No monthly fees, ever.</span>}
             />
             <CardLanding
               img={
@@ -118,7 +111,7 @@ export default function Home() {
                 />
               }
               title="Free cash withdrawals"
-              description="You can withdraw cash for free 4 times a month at any ATM."
+              description={<span>You can withdraw cash for free<br />4 times a month at any ATM.</span>}
             />
           </div>
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
@@ -132,7 +125,7 @@ export default function Home() {
                 />
               }
               title="Points program"
-              description="Earn points with your credit card purchases without paying a membership fee!"
+              description={<span>Earn points without paying<br />a membership fee!</span>}
             />
             <CardLanding
               img={

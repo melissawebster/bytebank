@@ -91,7 +91,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
               id={id}
               ref={ref}
               className={twMerge(
-                "block border disabled:bg-transparent bg-yellow-100 border-gray-300 rounded text-gray-900 w-full h-[38px] px-2.5",
+                "block border disabled:bg-transparent bg-sky-200 border-gray-300 rounded text-gray-900 w-full h-[38px] px-2.5",
                 inputclassname,
                 errorHighlight
               )}

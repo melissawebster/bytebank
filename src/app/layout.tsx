@@ -13,7 +13,7 @@ export default function AppLayout({
 }>) {
   return (
     <html lang="pt-BR" className="min-h-full">
-      <body className="bg-transparent antialiased">{children}</body>
+      <body className="bg-[linear-gradient(to_bottom,#554683,#37A7CC)] antialiased">{children}</body>
     </html>
   );
 }

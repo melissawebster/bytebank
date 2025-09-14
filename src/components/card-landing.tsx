@@ -1,9 +1,11 @@
-import React from "react";
+import React, { ReactNode } from "react";
+import { shinyTitleStyle, whiteTextStyle } from "./shared";
+import { BlackButtonGreenTxt } from "./buttons";
 
 interface CardLangingProps {
   img: React.ReactNode;
   title: string;
-  description: string;
+  description: ReactNode;
 }
 
 export default function CardLanding({
@@ -18,15 +20,16 @@ export default function CardLanding({
     >
       <div className="drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]">{img}</div>
       <div
-        className="font-electrolize mt-2 text-center text-lg 
-        bg-gradient-to-r from-cyan-300 to-lime-200 
-        text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
+        className={`${shinyTitleStyle} mt-2 text-center text-lg`}
       >
         {title}
       </div>
-      <div className="text-white text-center font-light text-sm leading-relaxed my-2 drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]">
+      <div className={`${whiteTextStyle} text-center text-sm my-2 h-[50px]`}>
         {description}
       </div>
+      <BlackButtonGreenTxt className="mt-3">
+        Learn more
+      </BlackButtonGreenTxt>
     </div>
   );
 }

@@ -5,6 +5,7 @@ import {
   SheetTrigger,
   SheetTitle,
   SheetClose,
+  SheetHeader,
 } from "@/src/components/shadcn/sheet";
 import Link from "next/link";
 import Image from "next/image";
@@ -53,6 +54,7 @@ export default function Header() {
                   <X className="h-5 w-5 text-white" />
                 </button>
               </SheetClose>
+              <SheetTitle className="hidden">Menu</SheetTitle>
               <GhostButtonGreenTxt className="-ml-16">
                 About Us
               </GhostButtonGreenTxt>
@@ -64,18 +66,20 @@ export default function Header() {
         </Sheet>
 
         <div className="flex gap-x-6">
-          <div className="hidden lg:flex gap-x-2">
+          <Link href="/" className="hidden lg:flex gap-x-2">
             <FullLogo />
-          </div>
+          </Link>
 
-          <Image
-            src={"/assets/logo-bytebank.png"}
-            alt="Bytebank Logo"
-            width={90}
-            height={40}
-            className="hidden md:block lg:hidden"
-            priority
-          />
+          <Link href="/">
+            <Image
+              src={"/assets/logo-bytebank.png"}
+              alt="Bytebank Logo"
+              width={90}
+              height={40}
+              className="hidden md:block lg:hidden"
+              priority
+            />
+          </Link>
           <div className="flex-col ml-3 gap-x-1 hidden md:block">
             <Link href="">
               <GhostButtonGreenTxt>About Us</GhostButtonGreenTxt>
@@ -86,9 +90,9 @@ export default function Header() {
           </div>
         </div>
 
-        <div className="flex gap-x-2 md:hidden">
+        <Link href="/" className="flex gap-x-2 md:hidden">
           <FullLogo />
-        </div>
+        </Link>
 
         <div className="hidden md:flex gap-x-4">
           <GreenButtonBlackTxt onClick={() => setIsAbrirContaOpen(true)}>
