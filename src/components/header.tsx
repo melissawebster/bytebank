@@ -23,7 +23,7 @@ import { FullLogo } from "./shared";
 
 export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false);
+  const [isOpenAccountOpen, setIsOpenAccountOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
@@ -95,13 +95,13 @@ export default function Header() {
         </Link>
 
         <div className="hidden md:flex gap-x-4">
-          <GreenButtonBlackTxt onClick={() => setIsAbrirContaOpen(true)}>
+          <GreenButtonBlackTxt onClick={() => setIsOpenAccountOpen(true)}>
             Open Account
           </GreenButtonBlackTxt>
 
           <ModalSignUp
-            isOpen={isAbrirContaOpen}
-            close={() => setIsAbrirContaOpen(false)}
+            isOpen={isOpenAccountOpen}
+            close={() => setIsOpenAccountOpen(false)}
           />
 
           <BlackButtonGreenTxt onClick={() => setIsLoginOpen(true)}>
