@@ -4,7 +4,7 @@ export const FullLogo = () => {
   return (
     <>
       <Image
-        src={"/assets/logo-bytebank.png"}
+        src={"/assets/logo-bytebank.svg"}
         alt="Bytebank Logo"
         width={90}
         height={40}
