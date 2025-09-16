@@ -111,7 +111,7 @@ export default function Home() {
                 />
               }
               title="Free cash withdrawals"
-              description={<span>You can withdraw cash for free<br />4 times a month at any ATM.</span>}
+              description={<span>You can withdraw cash for free<br />4 times a month.</span>}
             />
           </div>
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
@@ -137,7 +137,7 @@ export default function Home() {
                 />
               }
               title="Device Insurance"
-              description="Your mobile devices are protected for a small symbolic fee."
+              description="Your devices are protected for a small symbolic fee."
             />
           </div>
         </div>
