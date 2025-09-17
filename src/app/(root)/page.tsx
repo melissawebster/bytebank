@@ -22,11 +22,10 @@ export default function Home() {
       >
         <div className="flex flex-col md:flex-row w-full">
           <div
-            className="w-full md:w-[70%] text-center md:text-left md:ml-2
+            className={`w-full md:w-[70%] text-center md:text-left md:ml-2
              text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 
-             font-electrolize leading-snug opacity-100 
-             bg-gradient-to-r from-lime-300 to-cyan-400 
-             text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(255,255,255,0.2)]"
+             leading-snug opacity-100 
+             ${shinyTitleStyle}`}
           >
             Experience&nbsp;greater&nbsp;freedom
             <br />
