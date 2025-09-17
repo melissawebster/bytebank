@@ -32,27 +32,26 @@ export default function Home() {
             <br />
             in&nbsp;your&nbsp;financial&nbsp;life
           </div>
-          <div className="flex-1 mx-auto flex w-[80%] md:w-[30%] justify-center">
+          <div className="flex-1 mx-auto flex w-[80%] md:w-[35%] justify-center">
             <Image
               src="/assets/credit-cards.svg"
-              width={428}
+              width={500}
               height={280}
-              alt="credit"
+              alt="card"
               className="max-w-full object-contain"
             />
           </div>
         </div>
         <div
-          className={`${whiteTextStyle} w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-16 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]`}
+          className={`${whiteTextStyle} w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-20 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]`}
         >
-          <span>
-            ByteBank is more than a bank — it’s your partner in financial
+            <span>
+            ByteBank is more than a bank &mdash; it&rsquo;s your partner in financial
             freedom.&nbsp;
-          </span>
+            </span>
           <span className="hidden md:block h-1"></span>
           <span className="mt-0 md:-mt-4">
-            Simple, secure, and built for the digital world, we offer the tools
-            and benefits that fit your lifestyle.
+            We offer the tools and benefits that fit your lifestyle.
           </span>
         </div>
       </div>
@@ -81,13 +80,13 @@ export default function Home() {
         <ModalLogin isOpen={isLoginOpen} close={() => setIsLoginOpen(false)} />
       </div>
 
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center w-full">
         <div
           className={`${shinyTitleStyle} mt-12 font-extralight text-3xl opacity-100`}
         >
-          Benefits
+          Services
         </div>
-        <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-10 mb-10 mt-5 max-w-full">
+        <div className="flex flex-col lg:flex-row gap-y-6 lg:gap-x-10 mb-10 mt-5 w-full">
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
               img={
@@ -95,11 +94,11 @@ export default function Home() {
                   src="/assets/icon-card.svg"
                   width={80}
                   height={80}
-                  alt="Free account & card"
+                  alt="Checking Account"
                 />
               }
-              title="Free account & card"
-              description={<span>A free digital account.<br /> No monthly fees, ever.</span>}
+              title="Checking Account"
+              description={<span>Your everyday finances <br />made simple.</span>}
             />
             <CardLanding
               img={
@@ -107,11 +106,11 @@ export default function Home() {
                   src="/assets/icon-money.svg"
                   width={80}
                   height={80}
-                  alt="Free cash withdrawals"
+                  alt="Smart Card"
                 />
               }
-              title="Free cash withdrawals"
-              description={<span>You can withdraw cash for free<br />4 times a month.</span>}
+              title="Smart Card"
+              description={<span>One card for everyday payments <br />and credit flexibility.</span>}
             />
           </div>
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
@@ -125,7 +124,7 @@ export default function Home() {
                 />
               }
               title="Points program"
-              description={<span>Earn points without paying<br />a membership fee!</span>}
+              description={<span>Turn every purchase <br />into rewards.</span>}
             />
             <CardLanding
               img={
@@ -133,11 +132,11 @@ export default function Home() {
                   src="/assets/icon-security.svg"
                   width={80}
                   height={80}
-                  alt="Device Insurance"
+                  alt="Free ATM Access"
                 />
               }
-              title="Device Insurance"
-              description="Your devices are protected for a small symbolic fee."
+              title="Free ATM Access"
+              description={<span>Access your money,<br />absolutely fee-free.</span>}
             />
           </div>
         </div>
