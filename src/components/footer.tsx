@@ -4,12 +4,13 @@ import Image from "next/image";
 export default function Footer() {
   return (
     <footer className="bg-dark-transp flex justify-center py-4 border-t-3">
-      <div className="container mx-auto flex flex-col gap-y-6 md:flex-row text-white md:justify-between my-4 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
+      <div className="container mx-auto flex flex-col gap-y-6 md:flex-row text-white md:justify-between my-4 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 text-sm">
         <div className="flex flex-col gap-y-2">
           <div className="font-bold lime-green">Services</div>
           <div>Checking account</div>
-          <div>Salary account</div>
-          <div>Credit card</div>
+          <div>Smart Card</div>
+          <div>Points program</div>
+          <div>Free ATM access</div>
         </div>
 
         <div className="flex flex-col gap-y-2">
