@@ -12,7 +12,7 @@ export default async function Dashboard() {
 
   return (
     <div className="flex flex-col">
-      <div className="container flex mb-4 gap-x-4 mx-auto min-h-screen p-4 md:px-12 lg:px-16 xl:px-20">
+      <div className="container flex mb-4 gap-x-4 mx-auto min-h-screen p-4 md:px-12 lg:px-16 xl:px-20 2xl:px-48">
         <div className="w-[20%] h-full hidden lg:block">
           <NavDashboard className="hidden lg:block" />
         </div>

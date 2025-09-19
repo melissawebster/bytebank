@@ -32,7 +32,7 @@ export default function Header() {
         "fixed top-0 left-0 right-0 z-50 bg-dark-transp border-b-3 border-amber-300"
       }
     >
-      <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20">
+      <div className="container mx-auto flex items-center justify-between h-16 px-4 sm:px-6 md:px-12 lg:px-16 xl:px-20 2xl:px-48">
         <Sheet open={isSheetOpen} onOpenChange={setIsSheetOpen}>
           <SheetTrigger asChild className="md:hidden">
             <Button
