@@ -22,7 +22,7 @@ export const cardStyle =
   "rounded-lg border bg-gradient-to-r from-slate-600 to-slate-500 bg-indigo-200 bg-blend-multiply";
 
 export const darkCardStyle =
-  "rounded-lg border bg-dark-transp border-amber-300 py-6 px-8";
+  "rounded-lg border bg-dark-transp border-amber-300 pt-6 pb-10 px-8";
 
 export const whiteTextStyle =
   "text-white leading-relaxed font-light drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]";

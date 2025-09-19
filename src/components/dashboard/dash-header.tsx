@@ -46,7 +46,7 @@ export default function DashHeader() {
               </SheetClose>
               <SheetTitle className="hidden">Menu</SheetTitle>
               {navDashboardItems.map((item, index) => (
-                <div className="lime-green cursor-pointer text-sm ml-3">
+                <div key={index} className="lime-green cursor-pointer text-sm ml-3">
                   {item.name}
                 </div>
               ))}
