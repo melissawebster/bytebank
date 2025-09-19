@@ -16,6 +16,7 @@ import Input from "./label-error-input";
 import { GreenButtonBlackTxt } from "./buttons";
 import { labelError } from "./modal-signup";
 import { useRouter } from "next/navigation";
+import { modalStyle, modalWrapStyle } from "./shared";
 
 const loginZodSchema = () =>
   z.object({
@@ -51,7 +52,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={close}>
         <div className="fixed inset-0 bg-black/50 z-40" />
-        <div className="fixed inset-0 flex items-center justify-center p-4 z-50">
+        <div className={modalWrapStyle}>
           <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
@@ -61,7 +62,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="relative flex flex-col w-full max-w-xl h-[90%] justify-center transform rounded-xl space-y-6 bg-dark px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className={modalStyle}>
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -70,7 +71,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="relative w-full md:w-[50%] aspect-[400/237] mx-auto">
+              <div className="relative w-full md:w-[50%] aspect-[310/140] mx-auto">
                 <Image
                   src="/assets/icon-login.svg"
                   alt="illustration"

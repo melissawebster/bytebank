@@ -26,3 +26,9 @@ export const whiteTextStyle =
 
 export const shinyTitleStyle =
   "font-electrolize bg-gradient-to-r from-cyan-300 to-lime-200 text-transparent bg-clip-text drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
+
+export const modalWrapStyle = 
+  "fixed inset-0 flex justify-center pt-[75px] z-50 overflow-y-auto bg-"
+
+export const modalStyle =
+  "absolute w-[95%] max-w-xl transform rounded-xl space-y-6 bg-dark mx-4 px-8 md:px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all"
