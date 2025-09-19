@@ -10,7 +10,6 @@ export default function Footer() {
           <div>Checking account</div>
           <div>Smart Card</div>
           <div>Points program</div>
-          <div>Free ATM access</div>
         </div>
 
         <div className="flex flex-col gap-y-2">

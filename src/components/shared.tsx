@@ -21,6 +21,9 @@ export const FullLogo = () => {
 export const cardStyle =
   "rounded-lg border bg-gradient-to-r from-slate-600 to-slate-500 bg-indigo-200 bg-blend-multiply";
 
+export const darkCardStyle =
+  "rounded-lg border bg-dark-transp border-amber-300 py-6 px-8";
+
 export const whiteTextStyle =
   "text-white leading-relaxed font-light drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]";
 
@@ -32,3 +35,11 @@ export const modalWrapStyle =
 
 export const modalStyle =
   "absolute w-[95%] max-w-xl transform rounded-xl space-y-6 bg-dark mx-4 px-8 md:px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all"
+
+export const navDashboardItems = [
+  { name: "Dashboard", url: "/dashboard" },
+  { name: "Checking account", url: "/dashboard" },
+  { name: "Cards", url: "/dashboard" },
+  { name: "Payments", url: "/dashboard" },
+  { name: "Points program", url: "/dashboard" },
+];

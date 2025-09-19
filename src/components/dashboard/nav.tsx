@@ -1,41 +1,23 @@
 import { twMerge } from "tailwind-merge";
 import Link from "next/link";
+import { darkCardStyle, navDashboardItems } from "../shared";
 
 interface NavDashboardProps {
-  type: "tablet" | "desktop";
   className?: string;
 }
 
-export default function NavDashboard({ type, className }: NavDashboardProps) {
-  const menuItems = [
-    { nome: "Home", url: "/dashboard" },
-    { nome: "Transfers", url: "/dashboard" },
-    { nome: "Investments", url: "/dashboard/meus-investimentos" },
-  ];
+export default function NavDashboard({ className }: NavDashboardProps) {
   return (
-    <div className={twMerge("w-full", className)}>
-      {type === "tablet" && (
-        <div className="w-full flex flex-row justify-between px-4">
-          {menuItems.map((item, index) => (
-            <Link href={item.url}>
-              <div className="p-4" key={index}>
-                {item.nome}
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
-      {type === "desktop" && (
-        <div className="w-full h-full flex-col p-4 bg-white rounded-md">
-          {menuItems.map((item, index) => (
-            <Link href={item.url}>
-              <div className="p-4" key={index}>
-                {item.nome}
-              </div>
-            </Link>
-          ))}
-        </div>
-      )}
+    <div className={twMerge("w-full rounded-lg border bg-dark-transp border-amber-300 p-4", className)}>
+      <div className="w-full flex flex-row lg:flex-col justify-between px-4">
+        {navDashboardItems.map((item, index) => (
+          <Link href={item.url} key={index}>
+            <div className="font-normal lime-green text-sm p-4">
+              {item.name}
+            </div>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }

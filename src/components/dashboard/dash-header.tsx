@@ -11,12 +11,11 @@ import Image from "next/image";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "../shadcn/button";
-import { FullLogo } from "../shared";
-import { GhostButtonGreenTxt } from "../buttons";
+import { FullLogo, navDashboardItems } from "../shared";
+
 
 export default function DashHeader() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
-  const menuItems = ["Home", "Transfers", "Investments"];
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-dark-transp border-b-3 border-amber-300">
@@ -46,9 +45,9 @@ export default function DashHeader() {
                 </button>
               </SheetClose>
               <SheetTitle className="hidden">Menu</SheetTitle>
-              {menuItems.map((item, index) => (
+              {navDashboardItems.map((item, index) => (
                 <div className="lime-green cursor-pointer text-sm ml-3">
-                  {item}
+                  {item.name}
                 </div>
               ))}
             </nav>
