@@ -61,7 +61,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className="relative w-full max-w-xl transform rounded-xl space-y-6 bg-dark px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all">
+            <DialogPanel className="relative flex flex-col w-full max-w-xl h-[90%] justify-center transform rounded-xl space-y-6 bg-dark px-14 pt-14 pb-10 text-left align-middle shadow-xl transition-all">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -70,9 +70,9 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
                 <X className="w-5 h-5" />
               </button>
 
-              <div className="relative w-full md:w-[50%] aspect-[311/139] mx-auto">
+              <div className="relative w-full md:w-[50%] aspect-[400/237] mx-auto">
                 <Image
-                  src="/assets/logo-bytebank.svg"
+                  src="/assets/icon-login.svg"
                   alt="illustration"
                   fill
                   className="object-contain"
@@ -112,6 +112,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
               >
                 Go to my dashboard
               </GreenButtonBlackTxt>
+
             </DialogPanel>
           </TransitionChild>
         </div>

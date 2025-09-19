@@ -74,7 +74,7 @@ export default function ModalSignUp({ isOpen, close }: ModalSignUpProps) {
 
               <div className="relative w-full md:w-[50%] aspect-[311/139] mx-auto">
                 <Image
-                  src="/assets/logo-bytebank.svg"
+                  src="/assets/icon-open-account.svg"
                   alt="illustration"
                   fill
                   className="object-contain"
@@ -129,16 +129,15 @@ export default function ModalSignUp({ isOpen, close }: ModalSignUpProps) {
                       </p>
                     )}
                   </div>
-
-                  <GreenButtonBlackTxt
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="mx-auto block"
-                  >
-                    Create account
-                  </GreenButtonBlackTxt>
                 </div>
               </form>
+              <GreenButtonBlackTxt
+                type="submit"
+                disabled={isSubmitting}
+                className="mx-auto block"
+              >
+                Create account
+              </GreenButtonBlackTxt>
             </DialogPanel>
           </TransitionChild>
         </div>
