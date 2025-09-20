@@ -5,7 +5,6 @@ import {
   SheetTrigger,
   SheetTitle,
   SheetClose,
-  SheetHeader,
 } from "@/src/components/shadcn/sheet";
 import Link from "next/link";
 import Image from "next/image";
@@ -38,7 +37,7 @@ export default function Header() {
             <Button
               variant="ghost"
               size="icon"
-              className="border cursor-pointer hover:bg-transparent"
+              className="border border-white cursor-pointer hover:bg-transparent"
             >
               <Menu className="h-25 w-25" color="#9AFF4A" />
               <span className="sr-only">Toggle menu</span>

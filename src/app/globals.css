@@ -171,6 +171,8 @@ body {
 
 .bg-gradient-card {
   background-image: linear-gradient(90deg, #3e517c 100%, #4c608e 100%);
+  border: 1px solid #ffffff;  
+  border-radius: 0.5rem;
 }
 
 .shiny-title {
