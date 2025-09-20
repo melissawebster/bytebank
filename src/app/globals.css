@@ -185,6 +185,13 @@ body {
     -webkit-background-clip: text;
     background-clip: text;
   }
+
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
 @layer base {
