@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://bytebank-five.vercel.app/"),
   title: "ByteBank - Experience Greater Financial Freedom",
   description:
     "ByteBank is more than a bank — it’s your partner in financial freedom. Open an account today and enjoy tools that fit your lifestyle.",
