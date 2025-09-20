@@ -1,5 +1,5 @@
 import { User } from "@/src/app/api/users/types";
-import { darkCardStyle, shinyTitleStyle } from "../shared";
+import { darkCardStyle } from "../shared";
 import { format, parseISO } from "date-fns";
 
 interface Props {
@@ -11,10 +11,10 @@ export default function Balance({data}: Props) {
     <div className={`${darkCardStyle} relative flex flex-col items-center w-full`}>
       <div className="w-full flex flex-col gap-y-3">
 
-        <div className={`text-2xl ${shinyTitleStyle}`}>Balance</div>
+        <div className={"text-2xl shiny-title"}>Balance</div>
         <div className="text-white text-4xl">$ {data.balance}</div>
 
-        <div className={`text-lg ${shinyTitleStyle}`}>Recent Transactions</div>
+        <div className={"text-lg shiny-title"}>Recent Transactions</div>
         <div className="overflow-hidden rounded-md border border-gray-500">
           <table className="min-w-full">
             <tbody className="bg-dark">

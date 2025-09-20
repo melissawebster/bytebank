@@ -169,6 +169,22 @@ body {
   background-color: #004d61;
 }
 
+.shiny-title {
+  font-family: "Electrolize", sans-serif;
+  background-image: linear-gradient(45deg, #67e8f9 0%, #cffd80 100%);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
 @layer utilities {
   .no-spinner::-webkit-outer-spin-button,
   .no-spinner::-webkit-inner-spin-button {
@@ -179,18 +195,6 @@ body {
   .no-spinner {
     appearance: textfield;
     -moz-appearance: textfield;
-  }
-
-  .bg-clip-text {
-    -webkit-background-clip: text;
-    background-clip: text;
-  }
-
-  .text-gradient {
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
   }
 }
 

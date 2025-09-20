@@ -19,16 +19,13 @@ export const FullLogo = () => {
 };
 
 export const cardStyle =
-  "rounded-lg border bg-gradient-to-r from-slate-600 to-slate-500 bg-indigo-200";
+  "rounded-lg border bg-gradient-to-r from-[#36466c] to-[#4c608e] bg-indigo-200";
 
 export const darkCardStyle =
   "rounded-lg border bg-dark-transp border-amber-300 pt-6 pb-10 px-8";
 
 export const whiteTextStyle =
   "text-white leading-relaxed font-light drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]";
-
-export const shinyTitleStyle =
-  "font-electrolize bg-gradient-to-r from-cyan-300 to-lime-200 text-gradient drop-shadow-[2px_2px_0_rgba(0,0,0,0.2)]"
 
 export const modalWrapStyle = 
   "fixed inset-0 flex justify-center pt-[75px] z-50 overflow-y-auto bg-"

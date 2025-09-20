@@ -10,7 +10,6 @@ import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
 import {
   cardStyle,
-  shinyTitleStyle,
   whiteTextStyle,
 } from "@/src/components/shared";
 
@@ -29,7 +28,7 @@ export default function Home() {
             className={`w-full md:w-[70%] text-center md:text-left md:ml-2
              text-2xl sm:text-4xl md:text-3xl lg:text-4xl xl:text-5xl 
              leading-snug opacity-100 
-             ${shinyTitleStyle}`}
+             shiny-title`}
           >
             Experience&nbsp;greater&nbsp;freedom
             <br />
@@ -85,7 +84,7 @@ export default function Home() {
 
       <div className="flex flex-col items-center w-full">
         <div
-          className={`${shinyTitleStyle} mt-12 font-extralight text-3xl opacity-100`}
+          className="shiny-title mt-12 font-extralight text-3xl opacity-100"
         >
           Services
         </div>
