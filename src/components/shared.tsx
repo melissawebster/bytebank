@@ -19,7 +19,7 @@ export const FullLogo = () => {
 };
 
 export const cardStyle =
-  "rounded-lg border bg-gradient-to-r from-[#36466c] to-[#4c608e] bg-indigo-200";
+  "rounded-lg border bg-gradient-card";
 
 export const darkCardStyle =
   "rounded-lg border bg-dark-transp border-amber-300 pt-6 pb-10 px-8";
