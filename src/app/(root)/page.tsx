@@ -8,10 +8,14 @@ import CardLanding from "@/src/components/card-landing";
 import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
-import { cardStyle, shinyTitleStyle, whiteTextStyle } from "@/src/components/shared";
+import {
+  cardStyle,
+  shinyTitleStyle,
+  whiteTextStyle,
+} from "@/src/components/shared";
 
 export default function Home() {
-  const [isAbrirContaOpen, setIsAbrirContaOpen] = useState(false);
+  const [isOpenAccountOpen, setIsOpenAccountOpen] = useState(false);
   const [isLoginOpen, setIsLoginOpen] = useState(false);
 
   return (
@@ -44,10 +48,10 @@ export default function Home() {
         <div
           className={`${whiteTextStyle} w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-20 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]`}
         >
-            <span>
-            ByteBank is more than a bank &mdash; it&rsquo;s your partner in financial
-            freedom.&nbsp;
-            </span>
+          <span>
+            ByteBank is more than a bank &mdash; it&rsquo;s your partner in
+            financial freedom.&nbsp;
+          </span>
           <span className="hidden md:block h-1"></span>
           <span className="mt-0 md:-mt-4">
             We offer the tools and benefits that fit your lifestyle.
@@ -59,14 +63,14 @@ export default function Home() {
       <div className="w-full flex justify-between mt-4 gap-x-4 md:hidden">
         <GreenButtonBlackTxt
           className="w-[calc(50%-8px)]"
-          onClick={() => setIsAbrirContaOpen(true)}
+          onClick={() => setIsOpenAccountOpen(true)}
         >
           Open Account
         </GreenButtonBlackTxt>
 
         <ModalSignUp
-          isOpen={isAbrirContaOpen}
-          close={() => setIsAbrirContaOpen(false)}
+          isOpen={isOpenAccountOpen}
+          close={() => setIsOpenAccountOpen(false)}
         />
 
         <BlackButtonGreenTxt
@@ -89,27 +93,38 @@ export default function Home() {
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
             <CardLanding
               img={
-                <Image
-                  src="/assets/icon-card.svg"
-                  width={80}
-                  height={80}
-                  alt="Checking Account"
-                />
+                  <Image
+                    src="/assets/icon-account.svg"
+                    width={100}
+                    height={80}
+                    alt="Checking Account"
+                    className="object-contain"
+                  />
               }
               title="Checking Account"
-              description={<span>Your everyday finances <br />made simple.</span>}
+              description={
+                <span>
+                  Your everyday finances <br />
+                  made simple.
+                </span>
+              }
             />
             <CardLanding
               img={
                 <Image
-                  src="/assets/icon-money.svg"
-                  width={80}
+                  src="/assets/icon-card.svg"
+                  width={107}
                   height={80}
                   alt="Smart Card"
                 />
               }
               title="Smart Card"
-              description={<span>One card for everyday payments <br />and credit flexibility.</span>}
+              description={
+                <span>
+                  One card for everyday payments <br />
+                  and credit flexibility.
+                </span>
+              }
             />
           </div>
           <div className="flex flex-col md:flex-row gap-y-6 md:gap-x-10 lg:w-1/2">
@@ -117,25 +132,36 @@ export default function Home() {
               img={
                 <Image
                   src="/assets/icon-points.svg"
-                  width={80}
+                  width={109}
                   height={80}
                   alt="Points program"
                 />
               }
               title="Points program"
-              description={<span>Turn every purchase <br />into rewards.</span>}
+              description={
+                <span>
+                  Turn every purchase <br />
+                  into rewards.
+                </span>
+              }
             />
             <CardLanding
               img={
                 <Image
-                  src="/assets/icon-security.svg"
-                  width={80}
+                  src="/assets/icon-atm.svg"
+                  width={104}
                   height={80}
                   alt="Free ATM Access"
                 />
               }
               title="Free ATM Access"
-              description={<span>Access your money,<br />absolutely fee-free.</span>}
+              description={
+                <span>
+                  Access your money,
+                  <br />
+                  absolutely fee-free.
+                </span>
+              }
             />
           </div>
         </div>
