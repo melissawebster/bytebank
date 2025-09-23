@@ -3,7 +3,7 @@ Tech Challenge nº 1 for Front End Engineering POS TECH at FIAP.
 💳 ByteBank is a fictional digital banking application created for portfolio purposes and also as part of my postgraduate work.
 It showcases modern front-end development with Next.js, React, TailwindCSS, and other technologies.
 
-👉 Live demo: https://bytebank-five.vercel.app
+👉 Live demo: https://bytebank-pied.vercel.app
 
 🌟 Project Purpose
 - Demonstrate responsive and interactive UI
