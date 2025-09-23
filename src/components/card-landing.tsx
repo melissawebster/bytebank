@@ -16,7 +16,7 @@ export default function CardLanding({
   return (
     <div
       className="flex flex-col items-center w-full md:w-1/2 px-4 py-8 rounded-lg border border-white 
-			bg-gradient-card"
+			bg-blue-gradient-card"
     >
       <div className="drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]">{img}</div>
       <div

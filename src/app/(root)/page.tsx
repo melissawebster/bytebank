@@ -9,7 +9,7 @@ import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
 import {
-  cardStyle,
+  blueCardStyle,
   whiteTextStyle,
 } from "@/src/components/shared";
 
@@ -21,7 +21,7 @@ export default function Home() {
     <div className="container flex flex-col items-center p-4 md:px-12 lg:px-16 xl:px-20">
       {/* Hero Section */}
       <div
-        className={`${cardStyle} flex flex-col md:items-center lg:gap-x-4 w-full px-4 py-6`}
+        className={`${blueCardStyle} flex flex-col md:items-center lg:gap-x-4 w-full px-4 py-6`}
       >
         <div className="flex flex-col md:flex-row w-full">
           <div

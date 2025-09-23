@@ -18,11 +18,8 @@ export const FullLogo = () => {
   );
 };
 
-export const cardStyle =
-  "rounded-lg border bg-gradient-card";
-
-export const darkCardStyle =
-  "rounded-lg border bg-dark-transp border-amber-300 pt-6 pb-10 px-8";
+export const blueCardStyle =
+  "rounded-lg border bg-blue-gradient-card";
 
 export const whiteTextStyle =
   "text-white leading-relaxed font-light drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]";

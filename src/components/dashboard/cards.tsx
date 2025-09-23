@@ -1,11 +1,11 @@
-import { darkCardStyle } from "../shared";
+import { blueCardStyle } from "../shared";
 import Image from "next/image";
 
 export default function Cards() {
   return (
-    <div className={`${darkCardStyle} relative flex flex-col items-center w-full`}>
+    <div className={`${blueCardStyle} relative flex flex-col items-center w-full p-6`}>
       <div className="w-full flex flex-col gap-y-3">
-        <div className="text-2xl shiny-title">Cards</div>
+        <div className="text-3xl shiny-title">Cards</div>
         <div className="">
           <Image
             src="/assets/card-holder.svg"
