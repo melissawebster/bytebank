@@ -16,6 +16,7 @@ It showcases modern front-end development with Next.js, React, TailwindCSS, and 
 - React Hook Form + Zod
 - Jest + Testing Library
 - API Router
+- ESLint
 
 ✨ Features
 - Fully responsive landing page (desktop & mobile)
