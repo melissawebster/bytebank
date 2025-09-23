@@ -46,62 +46,20 @@ export const GhostButtonGreenTxt = (props: ButtonProps) => (
   </Button>
 );
 
-export const BlackButtonWhiteTxt = (props: ButtonProps) => (
+export const WhiteButton = (props: ButtonProps) => (
   <Button
     className={twMerge(
-      "bg-black text-white transition-colors cursor-pointer",
+      "bg-blue-100 font-light h-[44px] hover:bg-blue-100 cursor-pointer",
       props.className
     )}
     onClick={props.onClick}
+    variant="ghost"
   >
     {props.children}
   </Button>
 );
 
-export const TranspButtonBlackTxt = (props: ButtonProps) => (
-  <Button
-    className={twMerge(
-      "bg-transparent text-black transition-colors cursor-pointer border-2 border-black",
-      props.className
-    )}
-    onClick={props.onClick}
-  >
-    {props.children}
-  </Button>
-);
 
-export const OrangeButtonWhiteTxt = (props: ButtonProps) => (
-  <Button
-    className={twMerge(
-      "bg-[#ff5031] text-white cursor-pointer",
-      props.className
-    )}
-    onClick={props.onClick}
-  >
-    {props.children}
-  </Button>
-);
 
-export const TransparentButtonOrangeTxt = (props: ButtonProps) => (
-  <Button
-    className={twMerge(
-      "bg-transparent text-red-700 cursor-pointer border-2 border-red-700",
-      props.className
-    )}
-    onClick={props.onClick}
-  >
-    {props.children}
-  </Button>
-);
 
-export const PetroleumButtonWhiteTxt = (props: ButtonProps) => (
-  <Button
-    className={twMerge(
-      "bg-petroleum text-white cursor-pointer",
-      props.className
-    )}
-    onClick={props.onClick}
-  >
-    {props.children}
-  </Button>
-);
+
