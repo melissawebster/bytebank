@@ -13,7 +13,7 @@ import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
-import { GreenButtonBlackTxt, OrangeButtonWhiteTxt } from "./buttons";
+import { GreenButtonBlackTxt } from "./buttons";
 import { modalStyle, modalWrapStyle } from "./shared";
 
 export const labelError = "Invalid input. Please check and re-enter.";
