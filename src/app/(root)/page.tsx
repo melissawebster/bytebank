@@ -94,8 +94,8 @@ export default function Home() {
               img={
                   <Image
                     src="/assets/icon-account.svg"
-                    width={100}
-                    height={80}
+                    width={88}
+                    height={70}
                     alt="Checking Account"
                     className="object-contain"
                   />
@@ -112,8 +112,8 @@ export default function Home() {
               img={
                 <Image
                   src="/assets/icon-card.svg"
-                  width={107}
-                  height={80}
+                  width={93}
+                  height={70}
                   alt="Smart Card"
                 />
               }
@@ -131,8 +131,8 @@ export default function Home() {
               img={
                 <Image
                   src="/assets/icon-points.svg"
-                  width={109}
-                  height={80}
+                  width={95}
+                  height={70}
                   alt="Points program"
                 />
               }
@@ -148,8 +148,8 @@ export default function Home() {
               img={
                 <Image
                   src="/assets/icon-atm.svg"
-                  width={104}
-                  height={80}
+                  width={91}
+                  height={70}
                   alt="Free ATM Access"
                 />
               }
