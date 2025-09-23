@@ -38,7 +38,7 @@ export default function DashHeader() {
             side="left"
             className="w-[50%] bg-dark-transp border-0 [&>button]:hidden"
           >
-            <nav className="flex flex-col gap-4 mt-8 p-4 justify-center">
+            <nav className="flex flex-col gap-8 mt-12 p-4 justify-center">
               <SheetClose asChild>
                 <button className="absolute right-4 top-4 rounded-full p-2 hover:bg-white/10">
                   <X className="h-5 w-5 text-white" />
