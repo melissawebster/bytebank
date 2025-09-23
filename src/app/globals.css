@@ -146,12 +146,12 @@ body {
 
 .bg-dark-transp {
   background-color: #1b1b1b;
-  opacity: 0.95;
+  border: 1px solid #363636;
 }
 
-.dark-card-style {
+.dark-nav-style {
   background-color: rgba(0, 0, 0, 0.5);
-  padding: 14px 8px 14px 8px;
+  /* padding: 14px 8px 14px 8px; */
 }
 
 .bg-blue-gradient-card {
