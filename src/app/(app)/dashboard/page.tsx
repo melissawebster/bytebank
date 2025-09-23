@@ -20,7 +20,7 @@ export default async function Dashboard() {
           <NavDashboard className="hidden md:block lg:hidden" />
           <Balance data={users[0]} />
           <Cards />
-          <PointsProgram />
+          <PointsProgram data={users[0]} />
         </div>
       </div>
     </div>
