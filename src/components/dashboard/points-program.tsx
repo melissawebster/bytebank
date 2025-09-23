@@ -1,7 +1,6 @@
 import { User } from "@/src/app/api/users/types";
 import { WhiteButton } from "../buttons";
 import { blueCardStyle } from "../shared";
-import ProgressionBar from "./progression-bar";
 
 interface Props {
   data: User;
