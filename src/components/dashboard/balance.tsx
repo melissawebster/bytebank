@@ -2,6 +2,7 @@ import { User } from "@/src/app/api/users/types";
 import { blueCardStyle } from "../shared";
 import { format, parseISO } from "date-fns";
 import { ArrowDownToLine } from "lucide-react";
+import { WhiteButton } from "../buttons";
 
 interface Props {
   data: User
@@ -11,11 +12,14 @@ export default function Balance({data}: Props) {
   return (
     <div className={`${blueCardStyle} relative flex flex-col items-center w-full p-6`}>
       <div className="w-full flex flex-col gap-y-6">
-
-        <div className="flex flex-col gap-y-2">
-          <div className={"text-3xl shiny-title"}>Balance</div>
-          <div className="text-white text-4xl">$ {data.balance}</div>
+        <div className="flex justify-between">
+          <div className="flex flex-col gap-y-2">
+            <div className={"text-3xl shiny-title"}>Balance</div>
+            <div className="text-white text-4xl">$ {data.balance}</div>
+          </div>
+          <WhiteButton>See more</WhiteButton>
         </div>
+
 
         <div className="flex flex-col gap-y-2">
           <div className={"text-xl shiny-title"}>Transactions</div>
