@@ -9,6 +9,7 @@ const users: User[] = [
     account: "1234-5", 
     agency: "4321",
     balance: 3000.00,
+    points: 1260.00,
     transactions: [
       { 
         id: 1, 

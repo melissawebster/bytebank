@@ -13,5 +13,6 @@ export type User = {
   account: string;
   agency: string;
   balance: number;
+  points: number;
   transactions: Transaction[];
 };
