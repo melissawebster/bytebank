@@ -149,6 +149,17 @@ body {
   opacity: 0.95;
 }
 
+.dark-card-style {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 14px 8px 14px 8px;
+}
+
+.bg-blue-gradient-card {
+  background-image: linear-gradient(90deg, #3e517c 100%, #4c608e 100%);
+  border: 1px solid #ffffff;  
+  border-radius: 0.5rem;
+}
+
 .bg-dark {
   background-color: #1b1b1b;
 }
@@ -169,7 +180,7 @@ body {
   background-color: #004d61;
 }
 
-.bg-gradient-card {
+.bg-blue-gradient-card {
   background-image: linear-gradient(90deg, #3e517c 100%, #4c608e 100%);
   border: 1px solid #ffffff;  
   border-radius: 0.5rem;
