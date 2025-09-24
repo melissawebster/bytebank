@@ -39,7 +39,7 @@ export default function Home() {
               src="/assets/credit-cards.svg"
               width={500}
               height={280}
-              alt="card"
+              alt="credit cards"
               className="max-w-full object-contain"
             />
           </div>

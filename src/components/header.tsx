@@ -20,6 +20,9 @@ import ModalSignUp from "./modal-signup";
 import ModalLogin from "./modal-login";
 import { FullLogo } from "./shared";
 
+export const signInBtnText = "Sign In"
+export const openAccountBtnText = "Open Account"
+
 export default function Header() {
   const [isSheetOpen, setIsSheetOpen] = useState(false);
   const [isOpenAccountOpen, setIsOpenAccountOpen] = useState(false);
@@ -72,7 +75,7 @@ export default function Header() {
           <Link href="/">
             <Image
               src={"/assets/logo-bytebank.svg"}
-              alt="Bytebank Logo"
+              alt="bytebank logo"
               width={90}
               height={40}
               className="hidden md:block lg:hidden"
@@ -95,7 +98,7 @@ export default function Header() {
 
         <div className="hidden md:flex gap-x-4">
           <GreenButtonBlackTxt onClick={() => setIsOpenAccountOpen(true)}>
-            Open Account
+            {openAccountBtnText}
           </GreenButtonBlackTxt>
 
           <ModalSignUp
@@ -104,7 +107,7 @@ export default function Header() {
           />
 
           <BlackButtonGreenTxt onClick={() => setIsLoginOpen(true)}>
-            Sign In
+            {signInBtnText}
           </BlackButtonGreenTxt>
 
           <ModalLogin

@@ -73,7 +73,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className={modalStyle}>
+            <DialogPanel className={modalStyle} data-testid="login-modal">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
@@ -85,7 +85,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
               <div className="relative w-full md:w-[50%] aspect-[310/140] mx-auto">
                 <Image
                   src="/assets/icon-login.svg"
-                  alt="illustration"
+                  alt="login illustration"
                   fill
                   className="object-contain"
                 />
