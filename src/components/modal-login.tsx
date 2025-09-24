@@ -14,17 +14,24 @@ import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
 import { GreenButtonBlackTxt } from "./buttons";
-import { labelError } from "./modal-signup";
 import { useRouter } from "next/navigation";
 import { modalStyle, modalWrapStyle } from "./shared";
 
+// THIS IS A DEMO FORM
+
+const labelError = "Please type the text on the placeholder";
+
 const loginZodSchema = () =>
   z.object({
-    email: z.string().trim().min(1, labelError).email(labelError),
-    password: z.string().trim().min(1, labelError),
+    email: z.literal("joanofarc@pastmail.com", {
+      errorMap: () => ({ message: labelError }),
+    }),
+    password: z.literal("123456", {
+      errorMap: () => ({ message: labelError }),
+    }),
   });
 
-type SignUpFormSchema = z.infer<ReturnType<typeof loginZodSchema>>;
+type LoginFormSchema = z.infer<ReturnType<typeof loginZodSchema>>;
 
 interface ModalLoginProps {
   isOpen: boolean;
@@ -36,16 +43,20 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
     register,
     handleSubmit,
     formState: { errors, isSubmitting },
-  } = useForm<SignUpFormSchema>({
-    reValidateMode: "onChange",
+  } = useForm<LoginFormSchema>({
     resolver: zodResolver(loginZodSchema()),
-    defaultValues: { email: undefined, password: undefined },
+    defaultValues: {
+      email: "joanofarc@pastmail.com",
+      password: "123456",
+    },
+    reValidateMode: "onChange",
   });
 
   const router = useRouter();
 
   const onSubmit = (data: any) => {
     console.log(data);
+    router.push("/dashboard")
   };
 
   return (
@@ -90,6 +101,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
               >
                 <Input
                   label="E-mail"
+                  placeholder="joanofarc@pastmail.com"
                   helper={errors.email?.message}
                   {...register("email")}
                   classID="text-white"
@@ -97,6 +109,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
 
                 <Input
                   label="Password"
+                  placeholder="123456"
                   helper={errors.password?.message}
                   {...register("password")}
                 />
@@ -104,16 +117,15 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
                 <a href="/" className="text-xs text-green-600 underline">
                   Forgot password
                 </a>
-              </form>
-              <GreenButtonBlackTxt
-                // type="submit"
-                // disabled={isSubmitting}
-                className="mx-auto block mt-4"
-                onClick={() => router.push("/dashboard")}
-              >
-                Go to my dashboard
-              </GreenButtonBlackTxt>
 
+                <GreenButtonBlackTxt
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="mx-auto block mt-4"
+                >
+                  Go to my dashboard
+                </GreenButtonBlackTxt>
+              </form>
             </DialogPanel>
           </TransitionChild>
         </div>
