@@ -9,7 +9,7 @@ interface Props {
 
 export default function Balance({ data }: Props) {
   return (
-    <div className="landing-card-style landing-card-style--static relative flex flex-col items-center w-full p-6">
+    <div className="landing-card-style relative flex flex-col items-center w-full p-6">
       <div className="w-full flex flex-col gap-y-6">
         <div className="flex justify-between">
           <div className="flex flex-col gap-y-2">

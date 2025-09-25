@@ -14,8 +14,7 @@ export default function CardLanding({
 }: CardLangingProps) {
   return (
     <div
-      className="landing-card-style landing-card-style--brighter 
-      flex flex-col items-center w-full md:w-1/2 px-4 py-8"
+      className="landing-card-style flex flex-col items-center w-full md:w-1/2 px-4 py-8"
     >
       <div className="drop-shadow-[0_0_3px_rgba(0,0,0,0.3)]">{img}</div>
       <div

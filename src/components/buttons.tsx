@@ -12,7 +12,7 @@ interface ButtonProps {
 export const GreenButtonBlackTxt = (props: ButtonProps) => (
   <Button
     className={twMerge(
-      "bg-lime-green hover:bg-green-600 dark transition-colors cursor-pointer",
+      "btn-lime-style",
       props.className
     )}
     onClick={props.onClick}
@@ -24,7 +24,7 @@ export const GreenButtonBlackTxt = (props: ButtonProps) => (
 export const BlackButtonGreenTxt = (props: ButtonProps) => (
   <Button
     className={twMerge(
-      "bg-dark-transp lime-green cursor-pointer border border-white",
+      "btn-dark-style",
       props.className
     )}
     onClick={props.onClick}

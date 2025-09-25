@@ -144,11 +144,6 @@ body {
 
 /* Custom styles */
 
-.global-bg-gradient {
-  background: linear-gradient(to bottom, #554683, #5f78ae);
-  /* background: linear-gradient(to bottom, #554683, #1e5f74); */
-}
-
 .bg-dark-transp {
   background-color: #1b1b1b;
 }
@@ -160,23 +155,37 @@ body {
 
 .landing-card-style {
   border-radius: 0.5rem; 
-  border: 1px solid #FFF;    
+  border: 1px solid #c4c4c4;    
   background: rgba(0, 0, 0, 0.2); 
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .landing-card-style:hover {
-  box-shadow: 0 0 20px rgba(119, 170, 252, 0.4);
-  transform: scale(1.004); 
+  background: rgba(0, 0, 0, 0.17); 
+  border: 1px solid #ebebeb;  
 }
 
-.landing-card-style--static:hover {
-  box-shadow: none;
-  transform: none;
+.btn-lime-style {
+  color: #000;
+  background-color: #9aff4a;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.landing-card-style--brighter:hover {
-  transform: scale(1.01); 
+.btn-lime-style:hover {
+  background-color: #7bda2d;
+}
+
+.btn-dark-style {
+  color: #9aff4a;
+  background-color: #000;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border: 1px solid #c4c4c4;
+}
+
+.btn-dark-style:hover {
+  background-color: #1d1d1d;
 }
 
 .bg-dark {

@@ -13,7 +13,7 @@ export default function AppLayout({
 }>) {
   return (
     <html lang="pt-BR" className="min-h-full">
-      <body className="global-bg-gradient">{children}</body>
+      <body className="bg-[#344260]">{children}</body>
     </html>
   );
 }
