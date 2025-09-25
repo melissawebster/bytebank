@@ -144,6 +144,11 @@ body {
 
 /* Custom styles */
 
+.global-bg-gradient {
+  background: linear-gradient(to bottom, #554683, #5f78ae);
+  /* background: linear-gradient(to bottom, #554683, #1e5f74); */
+}
+
 .bg-dark-transp {
   background-color: #1b1b1b;
 }
