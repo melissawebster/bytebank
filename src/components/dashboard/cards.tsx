@@ -1,11 +1,10 @@
 import { WhiteButton } from "../buttons";
-import { blueCardStyle } from "../shared";
 import Image from "next/image";
 
 export default function Cards() {
   return (
     <div
-      className={`${blueCardStyle} relative flex flex-col items-center w-full p-6`}
+      className="landing-card-style landing-card-style--static relative flex flex-col items-center w-full p-6"
     >
       <div className="w-full flex flex-col gap-y-3">
         <div className="flex justify-between">

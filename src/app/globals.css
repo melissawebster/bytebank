@@ -142,7 +142,7 @@ body {
   color: #1b1b1b;
 }
 
-/* Backgrounds */
+/* Custom styles */
 
 .bg-dark-transp {
   background-color: #1b1b1b;
@@ -153,10 +153,25 @@ body {
   /* padding: 14px 8px 14px 8px; */
 }
 
-.bg-blue-gradient-card {
-  background-image: linear-gradient(90deg, #3e517c 100%, #4c608e 100%);
-  border: 1px solid #ffffff;  
-  border-radius: 0.5rem;
+.landing-card-style {
+  border-radius: 0.5rem; 
+  border: 1px solid #FFF;    
+  background: rgba(0, 0, 0, 0.2); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.landing-card-style:hover {
+  box-shadow: 0 0 20px rgba(119, 170, 252, 0.4);
+  transform: scale(1.004); 
+}
+
+.landing-card-style--static:hover {
+  box-shadow: none;
+  transform: none;
+}
+
+.landing-card-style--brighter:hover {
+  transform: scale(1.01); 
 }
 
 .bg-dark {
@@ -179,10 +194,11 @@ body {
   background-color: #004d61;
 }
 
-.bg-blue-gradient-card {
-  background-image: linear-gradient(90deg, #3e517c 100%, #4c608e 100%);
-  border: 1px solid #ffffff;  
-  border-radius: 0.5rem;
+.white-text-style {
+  color: #fff; 
+  line-height: 1.625; 
+  font-weight: 300; 
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3); 
 }
 
 .shiny-title {

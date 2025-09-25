@@ -1,6 +1,6 @@
 import { User } from "@/src/app/api/users/types";
 import { WhiteButton } from "../buttons";
-import { blueCardStyle } from "../shared";
+
 
 interface Props {
   data: User;
@@ -13,7 +13,7 @@ export default function PointsProgram({ data }: Props) {
 
   return (
     <div
-      className={`${blueCardStyle} relative flex flex-col items-center w-full p-6`}
+      className="landing-card-style landing-card-style--static relative flex flex-col items-center w-full p-6"
     >
       {/* Title */}
       <div className="w-full flex flex-col gap-y-6">

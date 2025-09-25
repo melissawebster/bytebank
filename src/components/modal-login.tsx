@@ -15,7 +15,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import Input from "./label-error-input";
 import { GreenButtonBlackTxt } from "./buttons";
 import { useRouter } from "next/navigation";
-import { modalStyle, modalWrapStyle } from "./shared";
+import { modalClass, modalWrapClass } from "./shared";
 
 // THIS IS A DEMO FORM
 
@@ -63,7 +63,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
     <Transition appear show={isOpen} as={Fragment}>
       <Dialog as="div" className="relative z-50" onClose={close}>
         <div className="fixed inset-0 bg-black/50 z-40" />
-        <div className={modalWrapStyle}>
+        <div className={modalWrapClass}>
           <TransitionChild
             as={Fragment}
             enter="ease-out duration-300"
@@ -73,7 +73,7 @@ export default function ModalLogin({ isOpen, close }: ModalLoginProps) {
             leaveFrom="scale-100 opacity-100"
             leaveTo="scale-95 opacity-0"
           >
-            <DialogPanel className={modalStyle} data-testid="login-modal">
+            <DialogPanel className={modalClass} data-testid="login-modal">
               <button
                 onClick={close}
                 className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"

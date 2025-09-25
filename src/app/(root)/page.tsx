@@ -8,10 +8,7 @@ import CardLanding from "@/src/components/card-landing";
 import ModalSignUp from "@/src/components/modal-signup";
 import ModalLogin from "@/src/components/modal-login";
 import { useState } from "react";
-import {
-  blueCardStyle,
-  whiteTextStyle,
-} from "@/src/components/shared";
+
 
 export default function Home() {
   const [isOpenAccountOpen, setIsOpenAccountOpen] = useState(false);
@@ -21,7 +18,7 @@ export default function Home() {
     <div className="container flex flex-col items-center p-4 md:px-12 lg:px-16 xl:px-20">
       {/* Hero Section */}
       <div
-        className={`${blueCardStyle} flex flex-col md:items-center lg:gap-x-4 w-full px-4 py-6`}
+        className="landing-card-style flex flex-col md:items-center lg:gap-x-4 w-full px-4 py-6"
       >
         <div className="flex flex-col md:flex-row w-full">
           <div
@@ -45,7 +42,7 @@ export default function Home() {
           </div>
         </div>
         <div
-          className={`${whiteTextStyle} w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-20 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]`}
+          className="white-text-style w-full text-sm lg:text-lg mt-0 md:-mt-8 lg:-mt-20 md:ml-3 drop-shadow-[0_0_2px_rgba(0,0,0,0.2)]"
         >
           <span>
             ByteBank is more than a bank &mdash; it&rsquo;s your partner in
