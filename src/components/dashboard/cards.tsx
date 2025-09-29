@@ -1,4 +1,4 @@
-import { WhiteButton } from "../buttons";
+import { DashButton } from "../buttons";
 import Image from "next/image";
 
 export default function Cards() {
@@ -9,22 +9,22 @@ export default function Cards() {
       <div className="w-full flex flex-col gap-y-3">
         <div className="flex justify-between">
           <div className={"text-3xl shiny-title"}>Cards</div>
-          <WhiteButton>Request new</WhiteButton>
+          <DashButton>Request new</DashButton>
         </div>
-        <div className="flex gap-x-6 overflow-x-auto pb-6 pr-4 mt-2">
+        <div className="flex gap-x-6 overflow-x-auto p-2 mt-2">
           <Image
             src="/assets/card-holder.svg"
             alt="card"
             width={283}
             height={182}
-            className="object-contain cursor-pointer rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
+            className="card-img-style"
           />
           <Image
             src="/assets/card-holder-2.svg"
             alt="card"
             width={283}
             height={182}         
-            className="object-contain cursor-pointer rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
+            className="card-img-style"
           />
         </div>
       </div>

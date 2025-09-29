@@ -1,7 +1,7 @@
 import { User } from "@/src/app/api/users/types";
 import { format, parseISO } from "date-fns";
 import { ArrowDownToLine } from "lucide-react";
-import { WhiteButton } from "../buttons";
+import { DashButton } from "../buttons";
 
 interface Props {
   data: User;
@@ -16,7 +16,7 @@ export default function Balance({ data }: Props) {
             <div className={"text-3xl shiny-title"}>Balance</div>
             <div className="text-white text-4xl">$ {data.balance}</div>
           </div>
-          <WhiteButton>See more</WhiteButton>
+          <DashButton>See more</DashButton>
         </div>
 
         <div className="flex flex-col gap-y-2">

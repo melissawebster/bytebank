@@ -149,35 +149,45 @@ body {
 }
 
 .dark-nav-style {
-  background-color: rgba(0, 0, 0, 0.2); 
-  /* padding: 14px 8px 14px 8px; */
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.card-img-style {
+  cursor: pointer;
+  border-radius: 1.5rem;
+  border: 1px solid #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.card-img-style:hover {
+  transform: scale(1.01); 
 }
 
 .landing-card-style {
-  border-radius: 0.5rem; 
-  border: 1px solid #c4c4c4;    
-  background: rgba(0, 0, 0, 0.2); 
+  border-radius: 0.5rem;
+  border: 1px solid #c4c4c4;
+  background: rgba(0, 0, 0, 0.2);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .landing-card-style:hover {
-  background: rgba(0, 0, 0, 0.17); 
-  border: 1px solid #ebebeb;  
+  background: rgba(0, 0, 0, 0.17);
+  border: 1px solid #ebebeb;
 }
 
 .landing-card-style.no-hover-effect:hover {
-  background: rgba(0, 0, 0, 0.2); 
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .transactions-item-style {
-  color: #FFF;
-  background: rgba(0, 0, 0, 0.1); 
+  color: #fff;
+  background: rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .transactions-item-style:hover {
-  color: #FFF;   
-  background: rgba(0, 0, 0, 0.2); 
+  color: #fff;
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .btn-lime-style {
@@ -224,10 +234,10 @@ body {
 }
 
 .white-text-style {
-  color: #fff; 
-  line-height: 1.625; 
-  font-weight: 300; 
-  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3); 
+  color: #fff;
+  line-height: 1.625;
+  font-weight: 300;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
 }
 
 .shiny-title {
