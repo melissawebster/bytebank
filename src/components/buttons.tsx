@@ -46,10 +46,10 @@ export const GhostButtonGreenTxt = (props: ButtonProps) => (
   </Button>
 );
 
-export const WhiteButton = (props: ButtonProps) => (
+export const DashButton = (props: ButtonProps) => (
   <Button
     className={twMerge(
-      "bg-blue-100 font-light h-[44px] hover:bg-blue-100 cursor-pointer",
+      "font-light lime-green h-[44px] border text-sm py-3 bg-slate-600 hover:bg-slate-700 cursor-pointer",
       props.className
     )}
     onClick={props.onClick}
