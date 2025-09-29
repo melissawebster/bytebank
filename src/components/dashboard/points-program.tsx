@@ -13,7 +13,7 @@ export default function PointsProgram({ data }: Props) {
 
   return (
     <div
-      className="landing-card-style relative flex flex-col items-center w-full p-6"
+      className="landing-card-style no-hover-effect relative flex flex-col items-center w-full p-6"
     >
       {/* Title */}
       <div className="w-full flex flex-col gap-y-6">

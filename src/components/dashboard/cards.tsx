@@ -4,7 +4,7 @@ import Image from "next/image";
 export default function Cards() {
   return (
     <div
-      className="landing-card-style relative flex flex-col items-center w-full p-6"
+      className="landing-card-style no-hover-effect relative flex flex-col items-center w-full p-6"
     >
       <div className="w-full flex flex-col gap-y-3">
         <div className="flex justify-between">
@@ -17,14 +17,14 @@ export default function Cards() {
             alt="card"
             width={283}
             height={182}
-            className="object-contain rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
+            className="object-contain cursor-pointer rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
           />
           <Image
             src="/assets/card-holder-2.svg"
             alt="card"
             width={283}
-            height={182}
-            className="object-contain rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
+            height={182}         
+            className="object-contain cursor-pointer rounded-4xl shadow-[6px_6px_0px_rgba(0,0,0,0.20)]"
           />
         </div>
       </div>

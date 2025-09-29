@@ -165,6 +165,21 @@ body {
   border: 1px solid #ebebeb;  
 }
 
+.landing-card-style.no-hover-effect:hover {
+  background: rgba(0, 0, 0, 0.2); 
+}
+
+.transactions-item-style {
+  color: #FFF;
+  background: rgba(0, 0, 0, 0.1); 
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.transactions-item-style:hover {
+  color: #FFF;   
+  background: rgba(0, 0, 0, 0.2); 
+}
+
 .btn-lime-style {
   color: #000;
   background-color: #9aff4a;
