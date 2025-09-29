@@ -11,7 +11,7 @@ export default function Cards() {
           <div className={"text-3xl shiny-title"}>Cards</div>
           <DashButton>Request new</DashButton>
         </div>
-        <div className="flex gap-x-6 overflow-x-auto p-2 mt-2">
+        <div className="flex gap-x-6 overflow-x-auto pt-2 px-2 pb-5 mt-2">
           <Image
             src="/assets/card-holder.svg"
             alt="card"

@@ -26,7 +26,7 @@ export const modalClass =
 
 export const navDashboardItems = [
   { name: "Dashboard", url: "/dashboard" },
-  { name: "Checking account", url: "/dashboard" },
+  { name: "Checking", url: "/dashboard" },
   { name: "Cards", url: "/dashboard" },
   { name: "Payments", url: "/dashboard" },
   { name: "Points program", url: "/dashboard" },

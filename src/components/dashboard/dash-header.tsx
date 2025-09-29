@@ -59,7 +59,7 @@ export default function DashHeader() {
           <Image
             src="/assets/avatar.svg"
             alt="avatar"
-            className="mr-[20px]"
+            className="mr-[3px]"
             width={40}
             height={40}
           />
