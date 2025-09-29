@@ -8,23 +8,17 @@ interface NavDashboardProps {
 
 export default function NavDashboard({ className }: NavDashboardProps) {
   return (
-    <div
-      className={twMerge(
-        `dark-nav-style text-lg w-full rounded-lg p-0`,
-        className
-      )}
-    >
+    <div className={twMerge(`text-lg w-full rounded-md p-0`, className)}>
       <div className="w-full flex flex-row lg:flex-col justify-between">
         {navDashboardItems.map((item, index) => (
-          <Link
-            href={item.url}
-            key={index}
-            className="first:rounded-l-lg last:rounded-r-lg
-                      lg:first:rounded-t-lg lg:first:rounded-l-none
-                      lg:last:rounded-b-lg  lg:last:rounded-r-none
-                      overflow-hidden"
-          >
-            <div className="flex-1 font-normal lime-green text-sm border py-3 lg:py-4 px-4 border-slate-600 bg-slate-800">
+          <Link href={item.url} key={index}>
+            <div
+              className={`flex-1 font-light lime-green border border-0.5 text-sm py-3 lg:py-4 px-4 bg-slate-600 hover:bg-slate-700 overflow-hidden ${
+                index === 0 ? "rounded-t-md" : ""
+              } ${
+                index === navDashboardItems.length - 1 ? "rounded-b-md" : ""
+              }`}
+            >
               {item.name}
             </div>
           </Link>
